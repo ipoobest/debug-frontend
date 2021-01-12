@@ -37,7 +37,7 @@ export function AssetWalletBalance(props: Props) {
       {connected && (
         <div className="d-flex flex-row justify-content-start align-items-center">
           <span className="text-muted">{props.asset}</span>
-          <span className="text-white font-weight-bold ml-2">
+          <span className="text-gold font-weight-bold ml-2">
             <LoadableValue value={weiToFixed(value, 4)} loading={loading} />
           </span>
         </div>

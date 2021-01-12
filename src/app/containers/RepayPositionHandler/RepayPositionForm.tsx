@@ -55,11 +55,11 @@ export function RepayPositionForm({ loan }: Props) {
 
   return (
     <div className="container position-relative">
-      <h4 className="text-teal text-center mb-3 text-uppercase">Repay loan</h4>
+      <h4 className="text-teal text-center mb-3 text-uppercase text-gold">Repay loan</h4>
 
       <FieldGroup label="Borrowed Amount">
         <DummyField>
-          {weiTo4(loan.principal)} <span className="text-muted">{asset}</span>
+          <span>{weiTo4(loan.principal)} </span>&nbsp;<span className="text-white text-right">{asset}</span>
         </DummyField>
       </FieldGroup>
 

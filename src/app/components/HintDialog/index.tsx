@@ -33,7 +33,7 @@ export function HintDialog() {
           <Button
             icon="cross"
             style={{ marginRight: '-10px', marginTop: '-10px' }}
-            className="text-white"
+            className="text-white bg-red"
             onClick={() => setShow(false)}
             minimal
           />

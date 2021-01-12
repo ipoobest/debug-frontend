@@ -159,7 +159,8 @@ export function SendTxProgress(props: Props) {
 
   const closeWindow = () => setDisplay(false);
 
-  let color = props.position === TradingPosition.LONG ? 'teal' : 'gold';
+  // let color = props.position === TradingPosition.LONG ? 'teal' : 'gold';
+  let color = props.position === TradingPosition.LONG ? 'gold' : 'gold';
 
   let mainText = getTitle(props.status, props.type);
   let subText = getDescription(props.status, props.type);

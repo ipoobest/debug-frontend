@@ -176,7 +176,8 @@ input {
 
 .bp3-dialog {
   @extend .sovryn-border;
-  @extend .bg-primary;
+  // @extend .bg-primary;
+  @extend .bg-white;
   @extend .p-3;
 }
 
@@ -274,6 +275,10 @@ header {
 
 .bg-gold {
   background: var(--gold);
+}
+
+.bg-red {
+  background: var(--red);
 }
 
 .border-gold {

@@ -47,7 +47,8 @@ const StyledClose = styled.button.attrs(_ => ({ type: 'button' }))`
   height: 24px;
   border: 1px solid var(--white);
   color: var(--white);
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: var(--red);
   border-radius: 12px;
   padding: 0;
   margin: 0;

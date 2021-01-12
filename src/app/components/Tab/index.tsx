@@ -24,7 +24,7 @@ const StyledTab = styled.button.attrs(_ => ({
   type: 'button',
   className: 'btn',
 }))`
-  color: var(--primary);
+  color: var(--dark-gray) !important;
   background-color: var(--light-gray);
   padding: 9px 11px;
   border-radius: 8px;
@@ -35,7 +35,7 @@ const StyledTab = styled.button.attrs(_ => ({
     css`
       background-color: var(--white);
       &:hover {
-        color: var(--primary);
+        color: var(--gold) !important;
       }
     `}
 `;

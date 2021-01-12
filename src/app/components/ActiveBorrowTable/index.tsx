@@ -99,7 +99,7 @@ export function ActiveBorrowTable(props: Props) {
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
   return (
-    <div className="bg-primary sovryn-border p-3">
+    <div className="bg-white sovryn-border p-3">
       <table {...getTableProps()} className="sovryn-table">
         <thead>
           {headerGroups.map(headerGroup => (
@@ -157,10 +157,13 @@ export function ActiveBorrowTable(props: Props) {
 }
 
 const StyledRepayButton = styled.button.attrs(_ => ({ type: 'button' }))`
-  border: 2px solid var(--green);
   width: 77px;
   height: 32px;
-  color: var(--green);
-  background-color: var(--primary);
+  /* border: 2px solid var(--green); */
+  border: 2px solid var(--gold);
+  /* color: var(--green); */
+  color: var(--gold);
+  // background-color: var(--primary);
+  background-color: var(--white);
   border-radius: 8px;
 `;
