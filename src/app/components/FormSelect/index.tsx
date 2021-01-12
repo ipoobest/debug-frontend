@@ -90,7 +90,7 @@ const StyledSelection = styled.button.attrs(_ => ({
   background-color: transparent;
   width: 100%;
   color: ${(props: StyledProps) =>
-    props.active ? `var(--white)` : `var(--light-gray)`};
+    props.active ? `var(--black)` : `var(--light-gray)`};
   font-size: 16px;
   letter-spacing: 0;
   text-transform: none;
