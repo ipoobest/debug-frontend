@@ -28,7 +28,7 @@ export function SkeletonRow(props: Props) {
       </div>
       {props.loadingText && (
         <div className="skeleton-overlay">
-          <div className="w-100 h-100 d-flex justify-content-center align-items-center">
+          <div className="w-100 h-100 d-flex justify-content-center align-items-center page-title">
             <>{props.loadingText}</>
           </div>
         </div>

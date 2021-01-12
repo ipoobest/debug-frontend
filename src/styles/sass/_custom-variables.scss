@@ -28,19 +28,23 @@
   --teal: #4ecdc4;
   --gold: #fec006;
   --primary: #242424;
-  --secondary: #2d2d2d;
+  // --secondary: #2d2d2d;
+  --secondary: #3aa6ff;
 
   --dark: var(--primary);
 
   --body-bg: var(--primary);
   --body-color: var(--white);
 
+  --border-color-main: var(--light-gray);
+
   --primary-font: 'Rowdies', cursive;
   --secondary-font: 'Work Sans', sans-serif;
 
 }
 
-$body-bg: #242424;
+// $body-bg: #242424;
+$body-bg: #006eff;
 $body-color: #fff;
 
 $dark-gray: #656565;

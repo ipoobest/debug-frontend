@@ -5,7 +5,8 @@
   border-left: 1px;
   border-radius: 8px;
   border-style: solid;
-  border-color: $white;
+  // border-color: $white;
+  border-color: var(--border-color-main);
 }
 .sovryn-border-left {
   border-left: 1px solid $white;
@@ -111,6 +112,8 @@
   font-family: var(--secondary-font);
   font-weight: 400;
   width: 100%;
+  background: var(--white);
+
   &.sovryn-table-mobile {
     font-size: 12px;
     @media(max-width: 335px) {
@@ -181,7 +184,7 @@ input {
   &.bp3-select-popover {
     & .bp3-popover-content {
       @extend .sovryn-border;
-      @extend .bg-primary;
+      @extend .bg-white;
 
       & .bp3-input-group {
         & input {

@@ -36,7 +36,9 @@ export const GlobalStyle = createGlobalStyle`
   input, select {
     font-family: var(--secondary-font);
     font-size: 400;
-    background-color: var(--primary);
+    /* background-color: var(--primary);
+    color: var(--white); */
+    background-color: var(--background);
     color: var(--white);
     border: none;
     &::selection {
@@ -133,5 +135,9 @@ input[type=number] {
   }
   .opaque {
     opacity: 0.2
+  }
+
+  .page-title {
+    color: var(--white);
   }
 `;

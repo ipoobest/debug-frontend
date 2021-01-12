@@ -34,7 +34,7 @@ export function UserAssets() {
   return (
     <section>
       <div className="d-flex align-items-center justify-content-start mb-3">
-        <h2 className="flex-shrink-0 flex-grow-0 mr-3">
+        <h2 className="flex-shrink-0 flex-grow-0 mr-3 page-title">
           {t(translations.userAssets.meta.title)}
         </h2>
         {connected && account && (

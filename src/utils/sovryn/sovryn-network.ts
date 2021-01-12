@@ -18,7 +18,7 @@ import { AbiItem } from 'web3-utils';
 import { appContracts } from '../blockchain/app-contracts';
 
 const themeColors: ThemeColors = {
-  background: 'var(--primary)',
+  background: 'var(--background)',
   border: 'none',
   main: 'var(--white)',
   secondary: 'var(--white)',
