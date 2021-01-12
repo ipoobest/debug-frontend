@@ -183,14 +183,17 @@ input {
 .bp3-popover {
   &.bp3-select-popover {
     & .bp3-popover-content {
-      @extend .sovryn-border;
+      // @extend .sovryn-border;
+      @extend .border-gold;
       @extend .bg-white;
+      @extend .text-black;
 
       & .bp3-input-group {
         & input {
           background-color: transparent;
           border: 1px solid var(--light-gray);
-          color: var(--white);
+          // color: var(--white);
+          color: var(--black);
         }
       }
     }
@@ -202,8 +205,11 @@ input {
 
   &, &.bp3-tooltip {
     & .bp3-popover-content {
-      @extend .sovryn-border;
-      @extend .bg-primary;
+      // @extend .sovryn-border;
+      // @extend .bg-primary;
+      @extend .border-gold;
+      @extend .bg-white;
+      @extend .text-black;
     }
 
     & .bp3-popover-arrow {
@@ -219,10 +225,13 @@ input {
   & .bp3-menu {
     background-color: transparent;
     & .bp3-menu-item {
+      // color: var(--white);
+      // color: var(--dark-gray);
       color: var(--white);
       font-family: var(--secondary-font);
       &.bp3-active {
-        background-color: var(--dark-gray);
+        // background-color: var(--dark-gray);
+        background-color: var(--Gold);
       }
     }
   }
@@ -266,4 +275,20 @@ header {
 
 .bg-gold {
   background: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.text-primary {
+  color: var(--primary-text-color);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
 }

@@ -27,8 +27,8 @@ export function Screen1({ state, dispatch }: Props) {
 
   return (
     <>
-      <h3 className="heading my-4 text-center">{t(s.title)}</h3>
-      <div className="btc-address sovryn-border bg-primary p-3">
+      <h3 className="heading my-4 text-center text-white">{t(s.title)}</h3>
+      <div className="btc-address sovryn-border bg-white p-3">
         <div className="row d-flex flex-nowrap w-100 mx-auto justify-content-between align-items-center">
           {address.length > 0 && (
             <>
@@ -49,7 +49,7 @@ export function Screen1({ state, dispatch }: Props) {
           </div>
         </div>
       </div>
-      <div className="description my-4">
+      <div className="description my-4 text-white">
         <p>{t(s.p1)}</p>
       </div>
       <TradeButton

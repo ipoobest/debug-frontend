@@ -16,7 +16,9 @@
 }
 
 .engage-wallet {
-  background: #242424;
+  // background: #242424;
+  background: var(--background);
+  color: var(--white);
   width: 125px;
   height: 58px;
   padding: 2px 20px;
@@ -28,7 +30,8 @@
   border-top: 1px solid #fff;
 
   &:hover, &:active, &:focus {
-    background: none !important;
+    // background: none !important;
+    background: var(--white) !important;
     color: #fec006 !important;
     border-right: 5px solid #fec006;
     border-bottom: 5px solid #fec006;
@@ -132,7 +135,7 @@
   &:hover, &:active, &:focus {
     //background: rgba(236, 236, 236, 0.23) !important;
     & .bp3-icon > svg:not([fill]) {
-      fill: #fec006
+      fill: #fec006;
     }
   }
 }
