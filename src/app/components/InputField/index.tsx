@@ -53,7 +53,8 @@ const StyledWrapper = styled.label.attrs(_ => ({
 const StyledInput = styled.input`
   background-color: transparent;
   width: 100%;
-  color: var(--white);
+  /* color: var(--white); */
+  color: var(--primary-text-color);
   font-size: 16px;
   letter-spacing: 0;
   ::-webkit-input-placeholder {

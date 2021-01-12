@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: var(--primary-font);
     font-size: 12px;
     background-color: var(--background);
-    color: white;
+    /* color: white; */
+    color: black;
     ${media.lg`
     font-size: 16px;
     `}

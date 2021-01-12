@@ -50,7 +50,7 @@ interface StyledButtonProps {
 
 const StyledButton = styled.button`
   color: ${(props: StyledButtonProps) => props.textColor};
-  background-color: var(--primary);
+  background-color: var(--Gold);
   border-radius: 20px;
   padding: 11px 22px;
   font-size: 12px;
@@ -64,6 +64,7 @@ const StyledButton = styled.button`
     props.disabled &&
     css`
       cursor: not-allowed;
+      background: var(--component-bg-inactive);
     `}
   ${media.lg`
   font-size: 14px

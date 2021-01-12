@@ -1,8 +1,11 @@
 :root {
   --Teal: #4ecdc4;
-  --background: #242424;
-  --secondary-bg: #414042;
-  --component-bg: #0b223b;
+  --background: #006eff;
+  // --secondary-bg: #414042;
+  --secondary-bg: #ffffff;
+  // --component-bg: #0b223b;
+  --component-bg: #ffffff;
+  --component-bg-inactive: #c3c3c3;
   --Gold: #fec006;
   --Field_bg: #05182e;
   --Green: #00ce7d;
@@ -11,6 +14,9 @@
   --LightGrey: #a9bacd;
   --MediumGrey: #7b96b5;
   --TabGrey: #213b58;
+
+  --primary-text-color: #000;
+  
 
   --black: #000;
   --dark-gray: #656565;

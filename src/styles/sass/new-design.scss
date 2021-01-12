@@ -24,6 +24,7 @@
   background: none !important;
 
   .tab-content {
+    background: var(--secondary-bg);
     padding: $grid-gutter-width / 2;
     border-bottom: 5px;
     border-right: 5px;
@@ -50,15 +51,17 @@
       border-radius: 8px 8px 0 0;
       margin-bottom: -1px;
       border-bottom: 1px solid $white;
+      background: var(--component-bg-inactive);
 
       @include media-breakpoint-up(lg) {
         font-size: 22px;
       }
 
       &.active {
-        color: $white;
+        color: var(--background);
         border-color: $white;
         border-bottom: 1px solid $dark;
+        background: $white;
       }
     }
   }

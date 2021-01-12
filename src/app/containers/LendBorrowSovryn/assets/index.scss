@@ -1,6 +1,7 @@
 .nav-item {
   text-transform: uppercase;
-  color: #656565;
+  // color: #656565;
+  color: white;
   font-weight: 600;
 
 
@@ -69,12 +70,15 @@
   padding: 0;
 }
 .currency-container {
-  border-color: var(--gray);
+  border-color: var(--bg-primary);
+  background: white;
   will-change: border-color, height;
   transition: border-color 0.3s, height 0.3s;
   &__active {
-    border-color: var(--white);
-    color: var(--white)!important;
+    // border-color: var(--white);
+    border-color: #004e9c;
+    // color: var(--white)!important;
+    color: var(--blue)!important;
   }
   //
   //& h3 {
@@ -190,14 +194,18 @@
     width: 100%;
     font-weight: 700;
     font-size: 12px;
+    border: 1px solid var(--background);
+    background: var(--background);
+    color: white;
     @media screen and (min-width: 900px) {
       font-size: 22px;
     }
   }
 
   & button.disabled {
-    background: #656565;
-    border: 1px solid #656565;
+    // background: #656565;
+    background: var(--component-bg-inactive);
+    // border: 1px solid #656565;
   }
 
 }
@@ -233,7 +241,8 @@
   border-bottom: 5px solid #fff;
   border-left: 1px solid #fff;
   border-top: 1px solid #fff;
-  background: #242424;
+  // background: #242424;
+  background: var(--component-bg);
   border-radius: 8px;
   margin: 5% 0;
   justify-content: center;
@@ -290,6 +299,11 @@
 
   & img {
     cursor: pointer;
+    background: var(--background);
+    border-radius: 50%;
+    padding: 0.2rem;
+    width: 80%;
+    height: auto;
   }
 
   & h3 {
@@ -336,3 +350,10 @@
   }
 }
 
+.btn {
+  color: var(--blue);
+
+  &:hover {
+    color: var(--gold);
+  }
+}
