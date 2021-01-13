@@ -18,7 +18,7 @@ export function Footer() {
   return (
     <footer className="mt-3">
       <div className="container py-3">
-        <div className="d-flex flex-row justify-content-between align-items-center text-lightGrey">
+        <div className="d-flex flex-row justify-content-between align-items-center text-white">
           <h6>
             <Trans
               i18nKey={translations.footer.title}
