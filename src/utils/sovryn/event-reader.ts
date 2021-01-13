@@ -132,25 +132,53 @@ class EventReader {
     options: ReaderOption = { fromBlock: 0, toBlock: 'latest' },
   ) {
     try {
+      // // console.log("Database Contracts", this.sovryn.databaseContracts);
+      // return this.sovryn.databaseContracts[contractName]
+      //   .getPastEvents(eventName, {
+      //     ...options,
+      //     ...{ filter },
+      //   })
+      //   .then(async e => {
+      //     console.log("getPastEvents:", e);
+      //     const eventDate = this.sovryn.getWeb3().eth.getBlock((e as any).blocknumber);
+      //     // const eventDate = new Date().getTime();
+      //     console.log("EventDate", eventDate);
+
+      //     return e.map(e => ({
+      //       ...e,
+      //       returnValues: (e as any).returnValues,
+      //       event: (e as any)?.event,
+      //       eventDate,
+      //     }));
+      //   });
+
       // console.log("Database Contracts", this.sovryn.databaseContracts);
-      return this.sovryn.databaseContracts[contractName]
-        .getPastEvents(eventName, {
-          ...options,
-          ...{ filter },
-        })
-        .then(e => {
-          // console.log("getPastEvents:", e);
-          return e.map(e => {
-            const blockNumber = (e as any).blockNumber;
-            const eventDate = this.sovryn.getWeb3().eth.getBlock(blockNumber); // WIP
-            return {
-              ...e,
-              returnValues: (e as any).returnValues,
-              event: (e as any)?.event,
-              eventDate,
-            };
-          });
-        });
+      const _events = await this.sovryn.databaseContracts[
+        contractName
+      ].getPastEvents(eventName, {
+        ...options,
+        ...{ filter },
+      });
+      // console.log("getPastEvents:", events);
+
+      let events: EventData[] = [];
+      for await (let e of _events) {
+        // console.log(e);
+        const blockNumber = (e as any).blockNumber;
+        const blockData: any = await this.sovryn
+          .getWeb3()
+          .eth.getBlock(blockNumber);
+        const eventDate = blockData.timestamp * 1000;
+
+        const evt: any = {
+          ...(e as {}),
+          returnValues: (e as any).returnValues,
+          event: (e as any)?.event,
+          eventDate,
+        };
+        events.push(evt);
+      }
+      return events;
     } catch (e) {
       return [];
     }
