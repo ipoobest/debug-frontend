@@ -89,8 +89,9 @@ function* processBlockHeader(event) {
       }
     }
   } catch (error) {
-    console.error('processBlockHeader: Error in block processing:');
-    console.error(error);
+    // console.error('processBlockHeader: Error in block processing:');
+    // console.error(error);
+    return error;
   }
 }
 
@@ -152,8 +153,9 @@ function* processBlock({ block, address }) {
       yield put(actions.reSync(block.number));
     }
   } catch (error) {
-    console.error('processBlock: Error in block processing:');
-    console.error(error);
+    // console.error('processBlock: Error in block processing:');
+    // console.error(error);
+    return error;
     // yield put({ type: 'BLOCK_FAILED', error });
   }
 }

@@ -31,7 +31,6 @@ export const getWeb3Contract = (address: string, abi: any) => {
 };
 
 export const getContract = (contractName: ContractName) => {
-  console.log(appContracts);
   return appContracts[contractName];
 };
 
