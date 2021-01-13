@@ -193,10 +193,16 @@ export class SovrynNetwork {
     web3: Web3,
     contractConfig: { address: string; abi: AbiItem | AbiItem[] },
   ) {
-    return new web3.eth.Contract(contractConfig.abi, contractConfig.address, {
-      // from: address,
-      // data: deployedBytecode,
-    });
+    const contract = new web3.eth.Contract(
+      contractConfig.abi,
+      contractConfig.address,
+      {
+        // from: address,
+        // data: deployedBytecode,
+      },
+    );
+    // console.log("Contract:", contract);
+    return contract;
   }
 
   protected initWriteWeb3(provider) {
@@ -261,8 +267,25 @@ export class SovrynNetwork {
           });
         }
       }
+      this.initDatabaseWeb3(chainId);
     } catch (e) {
       console.error('init read web3 fails.');
+      console.error(e);
+    }
+  }
+
+  protected async initDatabaseWeb3(chainId: number) {
+    try {
+      const nodeUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545'; // HOTFIX
+      const web3Provider = new Web3.providers.HttpProvider(nodeUrl, {
+        keepAlive: true,
+      });
+      this._databaseWeb3 = new Web3(web3Provider);
+      Array.from(Object.keys(appContracts)).forEach(key => {
+        this.addDatabaseContract(key, appContracts[key]);
+      });
+    } catch (e) {
+      console.error('init database web3 fails.');
       console.error(e);
     }
   }

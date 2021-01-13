@@ -245,7 +245,7 @@
   border-left: 1px solid #fff;
   border-top: 1px solid #fff;
   // background: #242424;
-  background: var(--component-bg);
+  background: var(--white);
   border-radius: 8px;
   margin: 5% 0;
   justify-content: center;
@@ -259,6 +259,7 @@
 
   .table {
     background: #242424;
+    background: var(--white);
     border: none;
 
     & thead th {
@@ -272,11 +273,13 @@
     }
 
     .cell__green {
-      color: #4ecdc4;
+      // color: #4ecdc4;
+      color: var(--green);
     }
 
     .cell__red {
-      color: #ec5b5b;
+      // color: #ec5b5b;
+      color: var(--red);
     }
 
     tr:nth-child(even) {

@@ -74,22 +74,31 @@ function* processBlockHeader(event) {
     const previousBlocks = Array(5)
       .fill(blockNumber)
       .map((number, index) => number - index);
+
     const blocksToProcess = previousBlocks
       .filter(x => !processedBlocks.includes(x))
       .reverse();
+
     for (const number of blocksToProcess) {
-      const block = yield call(web3.eth.getBlock, number, true);
-      yield call(processBlock, { block, address });
+      // console.log("CHECK", number);
+      const numberStr = number.toString();
+      const block = yield call(web3.eth.getBlock, numberStr, true); // TOFIX: Error: Number can only safely store up to 53 bits
+      // console.log("processBlockHeader:", block);
+      if (block) {
+        yield call(processBlock, { block, address });
+      }
     }
   } catch (error) {
-    console.error('Error in block processing:');
+    console.error('processBlockHeader: Error in block processing:');
     console.error(error);
   }
 }
 
 function* processBlock({ block, address }) {
   try {
+    // console.log("ProcessBlock", block, address);
     const transactionStack = yield select(selectTransactionStack);
+    // console.log("TransactionStack", transactionStack);
     const localTransactions = transactionStack.map(e => e.toLowerCase());
     const user = address.toLowerCase();
 
@@ -143,7 +152,7 @@ function* processBlock({ block, address }) {
       yield put(actions.reSync(block.number));
     }
   } catch (error) {
-    console.error('Error in block processing:');
+    console.error('processBlock: Error in block processing:');
     console.error(error);
     // yield put({ type: 'BLOCK_FAILED', error });
   }

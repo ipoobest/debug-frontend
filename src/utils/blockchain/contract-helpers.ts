@@ -30,8 +30,10 @@ export const getWeb3Contract = (address: string, abi: any) => {
   return new web3.eth.Contract(abi, address);
 };
 
-export const getContract = (contractName: ContractName) =>
-  appContracts[contractName];
+export const getContract = (contractName: ContractName) => {
+  console.log(appContracts);
+  return appContracts[contractName];
+};
 
 export const getContractNameByAddress = (address: string): ContractName => {
   return Object.keys(Sovryn.contracts).find(

@@ -132,18 +132,25 @@ class EventReader {
     options: ReaderOption = { fromBlock: 0, toBlock: 'latest' },
   ) {
     try {
+      // console.log("Database Contracts", this.sovryn.databaseContracts);
       return this.sovryn.databaseContracts[contractName]
         .getPastEvents(eventName, {
           ...options,
           ...{ filter },
         })
-        .then(e =>
-          e.map(e => ({
-            ...e,
-            returnValues: (e as any).returnVal,
-            event: (e as any)?.eventName,
-          })),
-        );
+        .then(e => {
+          // console.log("getPastEvents:", e);
+          return e.map(e => {
+            const blockNumber = (e as any).blockNumber;
+            const eventDate = this.sovryn.getWeb3().eth.getBlock(blockNumber); // WIP
+            return {
+              ...e,
+              returnValues: (e as any).returnValues,
+              event: (e as any)?.event,
+              eventDate,
+            };
+          });
+        });
     } catch (e) {
       return [];
     }
