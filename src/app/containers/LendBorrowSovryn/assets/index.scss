@@ -81,7 +81,7 @@
     // border-color: var(--white);
     border-color: #004e9c;
     // color: var(--white)!important;
-    color: var(--blue)!important;
+    color: var(--background)!important;
   }
   //
   //& h3 {
@@ -358,7 +358,7 @@
 }
 
 .btn {
-  color: var(--blue);
+  color: var(--background);
 
   &:hover {
     color: var(--gold);
