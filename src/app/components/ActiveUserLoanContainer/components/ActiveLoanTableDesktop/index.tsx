@@ -70,7 +70,7 @@ export function ActiveLoanTableDesktop(props: Props) {
   }
 
   return (
-    <div className="bg-primary sovryn-border p-3 d-none d-md-block">
+    <div className="bg-white sovryn-border p-3 d-none d-md-block">
       <table className="sovryn-table">
         <thead>
           <tr style={{ cursor: 'pointer' }}>
