@@ -12,6 +12,7 @@ import { translations } from 'locales/i18n';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { StatsRow } from '../../components/StatsRow';
+import { StatsList } from '../../components/StatsList';
 
 export function StatsPage() {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ export function StatsPage() {
       <main>
         <div className="container mt-5">
           <div className="sovryn-border sovryn-table p-3 mt-5 mb-5">
-            <table className="w-100">
+            <table className="w-100 d-none d-xl-block">
               <thead>
                 <tr>
                   <th>{t(translations.statsPage.asset)}</th>
@@ -49,6 +50,11 @@ export function StatsPage() {
                 ))}
               </tbody>
             </table>
+            <div className="d-xl-none">
+              {assets.map(asset => (
+                <StatsList asset={asset} key={asset} />
+              ))}
+            </div>
           </div>
         </div>
       </main>
