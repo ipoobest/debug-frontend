@@ -31,16 +31,16 @@ export class TradingPairDictionary {
     [
       TradingPairType.GOLD_JFIN,
       new TradingPair(
-        'GOLD',
+        'GASH',
         // asset
-        Asset.GOLD,
+        Asset.GASH,
         'Bitfinex:BTCUSD',
         // asset for long position
         Asset.JFIN,
         // asset for sort position
-        Asset.GOLD,
-        [Asset.JFIN, Asset.GOLD, Asset.BUSD],
-        [Asset.JFIN, Asset.GOLD, Asset.BUSD],
+        Asset.GASH,
+        [Asset.JFIN, Asset.GASH, Asset.BUSD],
+        [Asset.JFIN, Asset.GASH, Asset.BUSD],
       ),
     ],
   ]);

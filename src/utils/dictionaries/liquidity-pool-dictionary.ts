@@ -36,9 +36,9 @@ export class LiquidityPoolDictionary {
       ]),
     ],
     [
-      Asset.GOLD,
-      new LiquidityPool(Asset.GOLD, [
-        new LiquidityPoolSupplyAsset(Asset.GOLD, {
+      Asset.GASH,
+      new LiquidityPool(Asset.GASH, [
+        new LiquidityPoolSupplyAsset(Asset.GASH, {
           mainnet: '0x9CE25371426763025C04a9FCd581fbb9E4593475',
           testnet: '0xdaf6FD8370f5245d98E829c766e008cd39E8F060',
         }),

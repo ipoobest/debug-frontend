@@ -17,8 +17,8 @@ export class AssetsDictionary {
       ],
       [Asset.JFIN, new AssetDetails(Asset.JFIN, 'JFIN', 'JFIN', 18, jfinIcon)],
       [
-        Asset.GOLD,
-        new AssetDetails(Asset.GOLD, 'GOLD', 'BitPro', 18, goldIcon),
+        Asset.GASH,
+        new AssetDetails(Asset.GASH, 'GASH', 'BitPro', 18, goldIcon),
       ],
     ],
   );

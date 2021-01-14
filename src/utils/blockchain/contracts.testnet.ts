@@ -23,7 +23,7 @@ import ConverterRegistryABI from './abi/ConverterRegistry.json';
     "PriceFeeds": "0x7e81FCC121E3C77768dFBCeae73221A1cdf036B7",
     "WRBTC": "0xD11bF1a5C8c0D1b08C0c62d21665dA5ed3a73a35",
     "BUSD": "0x3577E7F05cb427698969DBcF85da93f36D973E4D",
-    "GOLD": "0x14Da9d927814660F9570dDD9b13442FeDEF8B6b1",
+    "GASH": "0x14Da9d927814660F9570dDD9b13442FeDEF8B6b1",
     "JFIN": "0x58916F7AeE5E3E6aa29F0E34d645420fC9E9bBEF",
     "LoanTokenLogicStandard": "0xce3810D76FdC025c5E9Dc1fd41F7Aa8E96f8FE4a"
 }
@@ -41,7 +41,7 @@ JFIN
     "loanToken": "0x0b401ea6556e5d49182b9BA8A755b82203C8aa1e",
     "TokenPriceFeed": "0xF2896a7baa618536827803E721ba457EBC5006Aa"
 }
-GOLD
+GASH
 {
     "mocStateAddress": "0x0857D15D54eb66fB41B48D8e36218290Efa28b5c",
     "sovrynProtocol": "0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7",
@@ -102,12 +102,12 @@ export const contracts = {
     abi: LoanTokenLogicStandard,
     blockNumber: 4862414,
   },
-  GOLD_token: {
+  GASH_token: {
     address: '0x14Da9d927814660F9570dDD9b13442FeDEF8B6b1',
     abi: TestTokenABI,
     blockNumber: 4865634,
   },
-  GOLD_lending: {
+  GASH_lending: {
     address: '0x3E2f4EaBA784756C0130FF8694d9461823C0D424',
     abi: LoanTokenLogicStandard,
     blockNumber: 4613566,
