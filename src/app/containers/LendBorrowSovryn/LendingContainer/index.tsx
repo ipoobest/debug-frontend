@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { min } from 'mathjs';
+import { min, bignumber } from 'mathjs';
 
 import { Asset } from 'types/asset';
 import { weiTo18 } from 'utils/blockchain/math-helpers';
@@ -10,6 +10,7 @@ import { useLending_balanceOf } from 'app/hooks/lending/useLending_balanceOf';
 import { useLending_approveAndLend } from 'app/hooks/lending/useLending_approveAndLend';
 import { useLending_approveAndUnlend } from 'app/hooks/lending/useLending_approveAndUnlend';
 import { useLending_transactionLimit } from 'app/hooks/lending/useLending_transactionLimit';
+
 import { useIsAmountWithinLimits } from 'app/hooks/useIsAmountWithinLimits';
 import { useAccount, useIsConnected } from 'app/hooks/useAccount';
 import { useWeiAmount } from 'app/hooks/useWeiAmount';
@@ -18,6 +19,7 @@ import TabContainer from '../components/TabContainer';
 import { actions } from '../slice';
 import '../assets/index.scss';
 import { SendTxResponse } from '../../../hooks/useSendContractTx';
+import { useLending_profitOf } from '../../../hooks/lending/useLending_profitOf';
 import { TxType } from '../../../../store/global/transactions-store/types';
 
 type Props = {
@@ -36,10 +38,53 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
   };
 
   const { value: userBalance } = useAssetBalanceOf(currency as Asset);
+  const { value: profitCall } = useLending_profitOf(
+    currency as Asset,
+    useAccount(),
+  );
+
   const { value: depositedBalance } = useLending_balanceOf(
     currency as Asset,
     useAccount(),
   );
+
+  const [profit, setProfit] = useState(profitCall);
+
+  const [ticker] = useState('0');
+
+  useEffect(() => {
+    setAmount('0');
+  }, [currency]);
+
+  useEffect(() => {
+    setProfit('0');
+  }, [currency]);
+
+  // useEffect(() => {
+  //   setTicker(
+  //     bignumber(balance)
+  //       .mul(
+  //         bignumber(interestCall).div(100).div(31536000 /* seconds in year */),
+  //       )
+  //       .div(10 ** 18)
+  //       .toFixed(0),
+  //   );
+  // }, [balance, interestCall]);
+
+  useEffect(() => {
+    const ms = 1000;
+    // const diff = bignumber(ticker).div(1000).div(ms);
+    let value = bignumber(profitCall).add(profit);
+    const interval = setInterval(() => {
+      // value = value.add(diff);
+      setProfit(value.toFixed(0));
+    }, ms);
+    return () => {
+      clearInterval(interval);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profitCall, ticker]);
+
   const {
     value: maxAmount,
     loading: loadingLimit,
@@ -53,7 +98,9 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
         amount = min(userBalance, maxAmount);
       }
     } else if (type === 'Redeem') {
-      amount = depositedBalance;
+      // amount = depositedBalance;
+      amount = (BigInt(depositedBalance) + BigInt(profit)).toString();
+      // alert(`${depositedBalance} + ${BigInt(profit)} = ${amount}`);
     }
     setAmount(weiTo18(amount));
   };
