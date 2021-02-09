@@ -116,7 +116,7 @@ const LendingHistory: React.FC<Props> = props => {
                           )}
                         >
                           <td>
-                            {/* {weiToFixed(event.returnValues.assetAmount, 8)}{' '} */}
+                            {weiToFixed(event.returnValues.assetAmount, 8)}{' '}
                             <span className="text-gold">{asset}</span>
                           </td>
                           <td>
