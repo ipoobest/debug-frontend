@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: var(--primary-font);
     font-size: 12px;
-    background-color: var(--background);
+    background: var(--background-gradient);
     /* color: white; */
     color: black;
     ${media.lg`
@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 400;
     /* background-color: var(--primary);
     color: var(--white); */
-    background-color: var(--background);
+    background-color: var(--background2);
     color: var(--white);
     border: none;
     &::selection {
