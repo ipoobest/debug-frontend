@@ -100,7 +100,7 @@ const LendingHistory: React.FC<Props> = props => {
                       <tr className="cell">
                         <th>Lend amount</th>
                         <th>Date &amp; time</th>
-                        <th>Price</th>
+                        {/* <th>Price</th> */}
                         <th>Transaction</th>
                       </tr>
                     </thead>
@@ -116,7 +116,7 @@ const LendingHistory: React.FC<Props> = props => {
                           )}
                         >
                           <td>
-                            {weiToFixed(event.returnValues.assetAmount, 8)}{' '}
+                            {/* {weiToFixed(event.returnValues.assetAmount, 8)}{' '} */}
                             <span className="text-gold">{asset}</span>
                           </td>
                           <td>
@@ -127,7 +127,7 @@ const LendingHistory: React.FC<Props> = props => {
                               )}
                             />
                           </td>
-                          <td>${weiToFixed(event.returnValues.price, 5)}</td>
+                          {/* <td>${weiToFixed(event.returnValues.price, 5)}</td> */}
                           <CopyToClipboard
                             text={event.transactionHash}
                             onCopy={() => onCopied(event.transactionHash)}
