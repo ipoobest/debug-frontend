@@ -11,10 +11,8 @@ export const currentNetwork =
 export const currentChainId = chains[currentNetwork];
 
 export const blockExplorers = {
-  56: 'https://explorer.rsk.co',
+  56: 'https://bscscan.com/',
   97: 'https://testnet.bscscan.com/',
-  btc_30: 'https://live.blockcypher.com/btc',
-  btc_31: 'https://live.blockcypher.com/btc-testnet',
 };
 
 export const networkNames = {
@@ -23,13 +21,13 @@ export const networkNames = {
 };
 
 export const rpcNodes = {
-  56: 'https://mainnet.sovryn.app/rpc',
+  56: 'https://bsc-dataseed1.binance.org/',
   // 30: 'https://mainnetbackup.sovryn.app/rpc',
   97: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
 };
 
 export const readNodes = {
-  56: 'wss://mainnet.sovryn.app/ws',
+  56: 'wss://ws-bsc.dome.cloud',
   // 30: 'wss://mainnetbackup.sovryn.app/ws',
   97: 'wss://ws-bsc-testnet.dome.cloud/',
   // 30: 'https://public-node.rsk.co',

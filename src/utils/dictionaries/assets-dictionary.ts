@@ -4,6 +4,7 @@ import busdIcon from 'assets/images/tokens/busd.svg';
 import jfinIcon from 'assets/images/tokens/jfin.svg';
 import bnbIcon from 'assets/images/tokens/bnb.svg';
 import goldIcon from 'assets/images/tokens/gold.svg';
+import ethIcon from 'assets/images/tokens/eth.svg';
 
 import { AssetDetails } from '../models/asset-details';
 
@@ -12,14 +13,16 @@ export class AssetsDictionary {
     [
       [Asset.BTC, new AssetDetails(Asset.BTC, 'BNB', 'BNB', 18, bnbIcon)],
       [
-        Asset.BUSD,
-        new AssetDetails(Asset.BUSD, 'BUSD', 'Dollar on Chain', 18, busdIcon),
+        Asset.BUSDJ,
+        new AssetDetails(Asset.BUSDJ, 'BUSD', 'BUSD', 18, busdIcon),
       ],
+      [Asset.BUSD, new AssetDetails(Asset.BUSD, 'BUSD', 'BUSD', 18, busdIcon)],
       [Asset.JFIN, new AssetDetails(Asset.JFIN, 'JFIN', 'JFIN', 18, jfinIcon)],
       [
         Asset.GASH,
         new AssetDetails(Asset.GASH, 'GASH', 'BitPro', 18, goldIcon),
       ],
+      [Asset.ETH, new AssetDetails(Asset.ETH, 'ETH', 'ETH', 18, ethIcon)],
     ],
   );
 

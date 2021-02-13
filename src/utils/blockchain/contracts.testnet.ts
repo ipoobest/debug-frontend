@@ -17,48 +17,33 @@ import SwapNetworkABI from './abi/SovrynSwapNetwork.json';
 import ConverterRegistryABI from './abi/ConverterRegistry.json';
 /*
 {
-    "medianizer": "0xa33606b1eA54134957e14E4eF998e0Fc3cbE34Bd",
-    "mocState": "0x428C52BEFD7fC8620d0984641bd152818f6F2Bfb",
-    "sovrynProtocol": "0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7",
-    "PriceFeeds": "0x7e81FCC121E3C77768dFBCeae73221A1cdf036B7",
-    "WRBTC": "0xD11bF1a5C8c0D1b08C0c62d21665dA5ed3a73a35",
-    "BUSD": "0x3577E7F05cb427698969DBcF85da93f36D973E4D",
-    "GASH": "0x14Da9d927814660F9570dDD9b13442FeDEF8B6b1",
-    "JFIN": "0x58916F7AeE5E3E6aa29F0E34d645420fC9E9bBEF",
-    "LoanTokenLogicStandard": "0xce3810D76FdC025c5E9Dc1fd41F7Aa8E96f8FE4a"
+    "WBASE": "0xF0Ab2d52283DAb94a1Db9Da99E528D686BC14dBd",
+    "BUSD": "0xC8a19327f421FEe2bd991196A12c95DB7C3A7De9",
+    "JFIN": "0xF8e0E07e21Cc6e5AAB3F09359cBBDE1132FF9b83",
+    "GASH": "0x3778D12096117eEcdb18fCFd0E45F4EAbf4E0Af8",
+    "mocOracleAddress": "0x884e737F3E155781Bcb7aa3b5d68F9c111c0E20D",
+    "tfiOracleAddress": "0x60F1c8D5337a3290214293018E0a498bF6e7293B",
+    "GoldOracleAddress": "0xCB93d6dA970485d551e89C4B7460372590506D87",
+    "JFINOracleAddress": "0x6E6a75E8e8aA47466a997E53b885e2c6F81Be722",
+    "thaifiProtocol": "0x279Eb1BDBb3fb52e0DfDc50e6962f3773eCd27d8",
+    "PriceFeeds": "0xFB4b1028CFD531dC53fF03BFc418BB524c9A1f4C",
+    "LoanTokenLogicStandard": "0x4f95b19a31599B1Cc5bb673bE39940A61aA9d60E",
+    "iBUSD": "0x3861b023e7a199c73f803888896949Bbb9Ba0DbA",
+    "iBUSD_PriceFeed": "0xDc5a315C84CF6062608b1266636B90c054b63993",
+    "iJFIN": "0xF1572F7090e075336ac6caAd6B1D97e670807241",
+    "iJFIN_PriceFeed": "0x6E6a75E8e8aA47466a997E53b885e2c6F81Be722",
+    "iGASH": "0x60B7EE0eeC769c7E90285e5e42FB0B163E803D76",
+    "iGASH_PriceFeed": "0xCB93d6dA970485d551e89C4B7460372590506D87"
 }
-BUSD
-{
-    "mocStateAddress": "0x22FD1506E02F93D9F9cB4277eeC510FD07671359",
-    "sovrynProtocol": "0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7",
-    "loanToken": "0x76cf94fcafbe03E02082FcF812ce5e0E5ffB4203",
-    "TokenPriceFeed": "0x3c744BFD30E7f1FEac6516a066B4fC9229C34D5E"
-}
-JFIN
-{
-    "mocStateAddress": "0xdEb2c320AF1173c1d272b63531dF66427e5C257E",
-    "sovrynProtocol": "0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7",
-    "loanToken": "0x0b401ea6556e5d49182b9BA8A755b82203C8aa1e",
-    "TokenPriceFeed": "0xF2896a7baa618536827803E721ba457EBC5006Aa"
-}
-GASH
-{
-    "mocStateAddress": "0x0857D15D54eb66fB41B48D8e36218290Efa28b5c",
-    "sovrynProtocol": "0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7",
-    "loanToken": "0x3E2f4EaBA784756C0130FF8694d9461823C0D424",
-    "TokenPriceFeed": "0x16d8D99dBCF85CdeaFee4344583507A6525f7E4c"
-}
-
-
 */
 export const contracts = {
   sovrynProtocol: {
-    address: '0xAC3F38F5cb0C3dCBe18434ECe345CEC30ac957E7',
+    address: '0x279Eb1BDBb3fb52e0DfDc50e6962f3773eCd27d8',
     abi: bzxAbi,
     blockNumber: 4613455,
   },
   priceFeed: {
-    address: '0x7e81FCC121E3C77768dFBCeae73221A1cdf036B7',
+    address: '0xFB4b1028CFD531dC53fF03BFc418BB524c9A1f4C',
     abi: priceFeedsAbi,
     blockNumber: 4613459,
   },
@@ -73,7 +58,7 @@ export const contracts = {
     blockNumber: 4640122,
   },
   BTC_token: {
-    address: '0xD11bF1a5C8c0D1b08C0c62d21665dA5ed3a73a35',
+    address: '0xF0Ab2d52283DAb94a1Db9Da99E528D686BC14dBd',
     abi: abiTestWBRTCToken,
     blockNumber: 4613443,
   },
@@ -82,33 +67,44 @@ export const contracts = {
     abi: LoanTokenLogicWrbtc,
     blockNumber: 4613527,
   },
+  BUSDJ_token: {
+    address: '0xC8a19327f421FEe2bd991196A12c95DB7C3A7De9',
+    abi: TestTokenABI,
+    blockNumber: 4613441,
+  },
+  BUSDJ_lending: {
+    address: '0x6A7d15Bd907f2C86EF806c85d43C2342B9944684',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4613503,
+  },
   BUSD_token: {
-    address: '0x3577E7F05cb427698969DBcF85da93f36D973E4D',
+    address: '0xC8a19327f421FEe2bd991196A12c95DB7C3A7De9',
     abi: TestTokenABI,
     blockNumber: 4613441,
   },
   BUSD_lending: {
-    address: '0x76cf94fcafbe03E02082FcF812ce5e0E5ffB4203',
+    address: '0x3861b023e7a199c73f803888896949Bbb9Ba0DbA',
     abi: LoanTokenLogicStandard,
     blockNumber: 4613503,
   },
+
   JFIN_token: {
-    address: '0x58916F7AeE5E3E6aa29F0E34d645420fC9E9bBEF',
+    address: '0xF8e0E07e21Cc6e5AAB3F09359cBBDE1132FF9b83',
     abi: TestTokenABI,
     blockNumber: 4862414,
   },
   JFIN_lending: {
-    address: '0x0b401ea6556e5d49182b9BA8A755b82203C8aa1e',
+    address: '0xF1572F7090e075336ac6caAd6B1D97e670807241',
     abi: LoanTokenLogicStandard,
     blockNumber: 4862414,
   },
   GASH_token: {
-    address: '0x14Da9d927814660F9570dDD9b13442FeDEF8B6b1',
+    address: '0x3778D12096117eEcdb18fCFd0E45F4EAbf4E0Af8',
     abi: TestTokenABI,
     blockNumber: 4865634,
   },
   GASH_lending: {
-    address: '0x3E2f4EaBA784756C0130FF8694d9461823C0D424',
+    address: '0x60B7EE0eeC769c7E90285e5e42FB0B163E803D76',
     abi: LoanTokenLogicStandard,
     blockNumber: 4613566,
   },

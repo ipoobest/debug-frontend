@@ -6,7 +6,7 @@
 
 import bzxAbi from './abi/bzxAbi.json';
 import priceFeedsAbi from './abi/priceFeedAbi.json';
-import LiquidityPoolV2Converter from './abi/LiquidityPoolV2Converter.json';
+//import LiquidityPoolV2Converter from './abi/LiquidityPoolV2Converter.json';
 import tokenAbi from './abi/abiTestToken.json';
 import abiTestWBRTCToken from './abi/abiTestWBRTCToken.json';
 import LoanTokenLogicWrbtc from './abi/LoanTokenLogicWrbtc.json';
@@ -18,9 +18,9 @@ import RBTCWrapperProxy from './abi/RBTCWrapperProxy.json';
 
 export const contracts = {
   sovrynProtocol: {
-    address: '0x5A0D867e0D70Fcc6Ade25C3F1B89d618b5B4Eaa7',
+    address: '0xAB02DcA711453aC997e397fdc4b93Bd0Aac9f7d4',
     abi: bzxAbi,
-    blockNumber: 2742418,
+    blockNumber: 4613455,
   },
   BTCWrapperProxy: {
     address: '0x78E7e79F1acc1f57a3291d5BfA8436A0771C1800',
@@ -28,76 +28,81 @@ export const contracts = {
     blockNumber: 2838500,
   },
   priceFeed: {
-    address: '0x437AC62769f386b2d238409B7f0a7596d36506e4',
+    address: '0x1625C385fa04A59FA513C5e2D74Cfab8dCC8734A',
     abi: priceFeedsAbi,
-    blockNumber: 2742435,
+    blockNumber: 4613459,
   },
   swapNetwork: {
-    address: '0x98aCE08D2b759a265ae326F010496bcD63C15afc',
+    address: '0x79D7554a96d7bB2e63eEf43584d4E6235030f90E',
     abi: SwapNetworkABI,
-    blockNumber: 2742574,
+    blockNumber: 4613467,
   },
   converterRegistry: {
-    address: '0x31A0F8400c75d52FdB413372233F28E3bdFB1c06',
+    address: '0x6f76921e800746c4f007dDC35Ca931D82702bD86',
     abi: ConverterRegistryABI,
-    blockNumber: 2742580,
+    blockNumber: 4640122,
   },
   BTC_token: {
-    address: '0x542fDA317318eBF1d3DEAf76E0b632741A7e677d',
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     abi: abiTestWBRTCToken,
-    blockNumber: 2742415,
+    blockNumber: 4613443,
   },
   BTC_lending: {
-    address: '0xa9DcDC63eaBb8a2b6f39D7fF9429d88340044a7A',
+    address: '0xeAB0644D8b2335D2cE37D0f7da52B2Be9C60AF52',
     abi: LoanTokenLogicWrbtc,
-    blockNumber: 2742496,
+    blockNumber: 4613527,
+  },
+  BUSDJ_token: {
+    address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    abi: TestTokenABI,
+    blockNumber: 4613441,
+  },
+  BUSDJ_lending: {
+    address: '0x7400bbaE02C412c1be9C1e7D177e2b1B76494717',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4613503,
   },
   BUSD_token: {
-    address: '0xe700691da7b9851f2f35f8b8182c69c53ccad9db',
+    address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     abi: TestTokenABI,
-    blockNumber: 1764664,
+    blockNumber: 4613441,
   },
   BUSD_lending: {
-    address: '0xd8D25f03EBbA94E15Df2eD4d6D38276B595593c1',
+    address: '0xbb7Bc16196815617e127cB2cE0a5a95381Da4AC0',
     abi: LoanTokenLogicStandard,
-    blockNumber: 2742476,
+    blockNumber: 4613503,
   },
-  BUSD_amm: {
-    address: '0xd715192612F03D20BaE53a5054aF530C9Bb0fA3f',
-    abi: LiquidityPoolV2Converter,
-    blockNumber: 2742633,
-  },
+
   JFIN_token: {
-    address: '0xEf213441a85DF4d7acBdAe0Cf78004E1e486BB96',
+    address: '0x8ad88bc768048596f58cd6572dbab979274faccb',
     abi: TestTokenABI,
-    blockNumber: 1408174,
+    blockNumber: 4862414,
   },
   JFIN_lending: {
-    address: '0x849C47f9C259E9D62F289BF1b2729039698D8387',
+    address: '0xddF7F0c356381EF95731e7D2dD565A3b2d2A6982',
     abi: LoanTokenLogicStandard,
-    blockNumber: 1406290,
+    blockNumber: 4862414,
   },
-  JFIN_amm: {
-    address: '0x448c2474b255576554EeD36c24430ccFac131cE3',
-    abi: LiquidityPoolV2Converter,
-    blockNumber: 1218833,
-  },
-  GOLD_token: {
-    address: '0x440cd83c160de5c96ddb20246815ea44c7abbca8',
+  GASH_token: {
+    address: '0xea080f4bb819a54cf47a0b10771476f548738287',
     abi: TestTokenABI,
-    blockNumber: 1764667,
+    blockNumber: 4865634,
   },
-  GOLD_lending: {
-    address: '0x6E2fb26a60dA535732F8149b25018C9c0823a715',
+  GASH_lending: {
+    address: '0x1F57413441Ff0e3C18C6E4D9Cf340ecAdb5e0d4c',
     abi: LoanTokenLogicStandard,
-    blockNumber: 1218721,
+    blockNumber: 4613566,
   },
-  GOLD_amm: {
-    address: '0x26463990196B74aD5644865E4d4567E4A411e065',
-    abi: LiquidityPoolV2Converter,
-    blockNumber: 1218833,
+  ETH_token: {
+    address: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
   },
-  // end non-mainnet //
+  ETH_lending: {
+    address: '0xA23fcf32Ad8839Cd9961dDF73C72ed796C8b5845',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
   ...(process.env.REACT_APP_WHITELIST_TOKEN &&
     process.env.REACT_APP_WHITELIST === 'true' && {
       whitelistToken: {
