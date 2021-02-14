@@ -18,7 +18,7 @@ import RBTCWrapperProxy from './abi/RBTCWrapperProxy.json';
 
 export const contracts = {
   sovrynProtocol: {
-    address: '0xAB02DcA711453aC997e397fdc4b93Bd0Aac9f7d4',
+    address: '0xf263906c77C64f8426dEa674891c80d894880dDA',
     abi: bzxAbi,
     blockNumber: 4613455,
   },
@@ -28,7 +28,7 @@ export const contracts = {
     blockNumber: 2838500,
   },
   priceFeed: {
-    address: '0x1625C385fa04A59FA513C5e2D74Cfab8dCC8734A',
+    address: '0x203daeCF10a354DF18Ba3DA24Df41Ba1904a3e7F',
     abi: priceFeedsAbi,
     blockNumber: 4613459,
   },
@@ -68,18 +68,17 @@ export const contracts = {
     blockNumber: 4613441,
   },
   BUSD_lending: {
-    address: '0xbb7Bc16196815617e127cB2cE0a5a95381Da4AC0',
+    address: '0xE5ee1384332167761F9d939Ad0A2815AA87777f3',
     abi: LoanTokenLogicStandard,
     blockNumber: 4613503,
   },
-
   JFIN_token: {
     address: '0x8ad88bc768048596f58cd6572dbab979274faccb',
     abi: TestTokenABI,
     blockNumber: 4862414,
   },
   JFIN_lending: {
-    address: '0xddF7F0c356381EF95731e7D2dD565A3b2d2A6982',
+    address: '0xaea417e9C9F2322C30ce5238a67D627595e8A781',
     abi: LoanTokenLogicStandard,
     blockNumber: 4862414,
   },
@@ -89,7 +88,7 @@ export const contracts = {
     blockNumber: 4865634,
   },
   GASH_lending: {
-    address: '0x1F57413441Ff0e3C18C6E4D9Cf340ecAdb5e0d4c',
+    address: '0x4Ad11800e197B3A17d78a5c2466647527750560c',
     abi: LoanTokenLogicStandard,
     blockNumber: 4613566,
   },
@@ -99,7 +98,57 @@ export const contracts = {
     blockNumber: 4865634,
   },
   ETH_lending: {
-    address: '0xA23fcf32Ad8839Cd9961dDF73C72ed796C8b5845',
+    address: '0x2eF35B4408DD6aE9B0d36f38e68f5339438D0aFE',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
+  BAND_token: {
+    address: '0xad6caeb32cd2c308980a548bd0bc5aa4306c6c18',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
+  },
+  BAND_lending: {
+    address: '0x2F848ea7f4fBd5460222180397406c7727306D11',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
+  ALPHA_token: {
+    address: '0xa1faa113cbe53436df28ff0aee54275c13b40975',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
+  },
+  ALPHA_lending: {
+    address: '0x47A279c22b975f949F99F5c95e5332fbacE966A0',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
+  WBTC_token: {
+    address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
+  },
+  WBTC_lending: {
+    address: '0x49CAF3504830FCc19f650E1973911ddDe790F83F',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
+  DOGE_token: {
+    address: '0xba2ae424d960c26247dd6c32edc70b295c744c43',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
+  },
+  DOGE_lending: {
+    address: '0xd82bd5fEF87214298D706762Ace12E21825CE5BC',
+    abi: LoanTokenLogicStandard,
+    blockNumber: 4862414,
+  },
+  USDT_token: {
+    address: '0x55d398326f99059ff775485246999027b3197955',
+    abi: TestTokenABI,
+    blockNumber: 4865634,
+  },
+  USDT_lending: {
+    address: '0x879Aa05B89203b4b4b0dc798e8a3935Bd5Ddf343',
     abi: LoanTokenLogicStandard,
     blockNumber: 4862414,
   },

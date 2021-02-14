@@ -13,6 +13,8 @@ export function usePriceFeeds_tradingPairRates() {
   const dispatch = useDispatch();
 
   const getRate = useCallback(async (sourceAsset: Asset, destAsset: Asset) => {
+    console.log(sourceAsset);
+    console.log(destAsset);
     return contractReader.call('priceFeed', 'queryRate', [
       getTokenContract(sourceAsset).address,
       getTokenContract(destAsset).address,
