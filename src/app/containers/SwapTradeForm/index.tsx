@@ -43,7 +43,7 @@ export function SwapTradeForm(props: Props) {
 
   const [amount, setAmount] = useState('');
   const [sourceToken, setSourceToken] = useState(Asset.BUSD);
-  const [targetToken, setTargetToken] = useState(Asset.BTC);
+  const [targetToken, setTargetToken] = useState(Asset.BNB);
   const [sourceOptions, setSourceOptions] = useState<any[]>([]);
   const [targetOptions, setTargetOptions] = useState<any[]>([]);
 

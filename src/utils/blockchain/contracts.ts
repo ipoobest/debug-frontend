@@ -9,7 +9,7 @@ import priceFeedsAbi from './abi/priceFeedAbi.json';
 //import LiquidityPoolV2Converter from './abi/LiquidityPoolV2Converter.json';
 import tokenAbi from './abi/abiTestToken.json';
 import abiTestWBRTCToken from './abi/abiTestWBRTCToken.json';
-import LoanTokenLogicWrbtc from './abi/LoanTokenLogicWrbtc.json';
+//import LoanTokenLogicWrbtc from './abi/LoanTokenLogicWrbtc.json';
 import LoanTokenLogicStandard from './abi/LoanTokenLogicStandard.json';
 import TestTokenABI from './abi/abiTestToken.json';
 import SwapNetworkABI from './abi/SovrynSwapNetwork.json';
@@ -42,25 +42,10 @@ export const contracts = {
     abi: ConverterRegistryABI,
     blockNumber: 4640122,
   },
-  BTC_token: {
+  BNB_token: {
     address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     abi: abiTestWBRTCToken,
     blockNumber: 4613443,
-  },
-  BTC_lending: {
-    address: '0xeAB0644D8b2335D2cE37D0f7da52B2Be9C60AF52',
-    abi: LoanTokenLogicWrbtc,
-    blockNumber: 4613527,
-  },
-  BUSDJ_token: {
-    address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    abi: TestTokenABI,
-    blockNumber: 4613441,
-  },
-  BUSDJ_lending: {
-    address: '0x7400bbaE02C412c1be9C1e7D177e2b1B76494717',
-    abi: LoanTokenLogicStandard,
-    blockNumber: 4613503,
   },
   BUSD_token: {
     address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',

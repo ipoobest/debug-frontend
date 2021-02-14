@@ -20,7 +20,7 @@ export function useApproveAndAddMargin(
 
   const handleTx = useCallback(async () => {
     let tx: CheckAndApproveResult = {};
-    if (collateralToken !== Asset.BTC) {
+    if (collateralToken !== Asset.BNB) {
       tx = await contractWriter.checkAndApprove(
         collateralToken,
         appContracts.sovrynProtocol.address,

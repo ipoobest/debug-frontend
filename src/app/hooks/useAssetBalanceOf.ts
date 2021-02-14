@@ -27,5 +27,5 @@ export function useAssetBalanceOf(asset: Asset) {
     setContractName(getTokenContractName(asset));
   }, [asset]);
 
-  return asset === Asset.BTC ? btcResult : tokenResult;
+  return asset === Asset.BNB ? btcResult : tokenResult;
 }

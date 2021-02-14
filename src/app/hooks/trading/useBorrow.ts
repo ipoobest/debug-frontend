@@ -36,7 +36,7 @@ export function useBorrow(
         ], // loanDataBytes
         {
           from: account,
-          value: collateralToken === Asset.BTC ? collateralTokenSent : '0',
+          value: collateralToken === Asset.BNB ? collateralTokenSent : '0',
           nonce,
         },
         { type: TxType.BORROW, approveTransactionHash: approveTx },

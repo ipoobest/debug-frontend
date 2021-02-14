@@ -111,7 +111,7 @@ function AssetRow({ item }: AssetProps) {
           .div(10 ** item.decimals)
           .toFixed(0),
       );
-      if (item.asset === Asset.BTC) {
+      if (item.asset === Asset.BNB) {
         setDollarValue('0');
       }
     }

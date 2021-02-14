@@ -23,7 +23,7 @@ export function useApproveAndCloseWithDeposit(
   return {
     send: async () => {
       let tx: CheckAndApproveResult = {};
-      if (borrowToken !== Asset.BTC) {
+      if (borrowToken !== Asset.BNB) {
         tx = await contractWriter.checkAndApprove(
           borrowToken,
           getContract('sovrynProtocol').address,

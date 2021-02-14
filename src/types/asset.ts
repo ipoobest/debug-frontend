@@ -1,5 +1,5 @@
 export enum Asset {
-  BTC = 'BTC',
+  BNB = 'BNB',
   BUSD = 'BUSD',
   JFIN = 'JFIN',
   GASH = 'GASH',

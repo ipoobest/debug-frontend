@@ -18,14 +18,14 @@ export class TradingPairDictionary {
       new TradingPair(
         'BTC',
         // asset
-        Asset.BTC,
+        Asset.BNB,
         'Bitfinex:BTCUSD',
         // asset for long position
         Asset.JFIN,
         // asset for sort position
-        Asset.BTC,
-        [Asset.BTC, Asset.JFIN, Asset.BUSD],
-        [Asset.BTC, Asset.JFIN, Asset.BUSD],
+        Asset.BNB,
+        [Asset.BNB, Asset.JFIN, Asset.BUSD],
+        [Asset.BNB, Asset.JFIN, Asset.BUSD],
       ),
     ],
     [

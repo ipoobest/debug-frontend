@@ -9,14 +9,14 @@ import alphaIcon from 'assets/images/tokens/alpha.svg';
 import dogeIcon from 'assets/images/tokens/doge.svg';
 import bandIcon from 'assets/images/tokens/band.svg';
 import usdtIcon from 'assets/images/tokens/usdt.svg';
-import btcIcon from 'assets/images/tokens/btc.svg';
+//import btcIcon from 'assets/images/tokens/btc.svg';
 
 import { AssetDetails } from '../models/asset-details';
 
 export class AssetsDictionary {
   public static assets: Map<Asset, AssetDetails> = new Map<Asset, AssetDetails>(
     [
-      [Asset.BTC, new AssetDetails(Asset.BTC, 'BNB', 'BNB', 18, bnbIcon)],
+      [Asset.BNB, new AssetDetails(Asset.BNB, 'BNB', 'BNB', 18, bnbIcon)],
       [Asset.BUSD, new AssetDetails(Asset.BUSD, 'BUSD', 'BUSD', 18, busdIcon)],
       [Asset.JFIN, new AssetDetails(Asset.JFIN, 'JFIN', 'JFIN', 18, jfinIcon)],
       [Asset.GASH, new AssetDetails(Asset.GASH, 'GASH', 'GASH', 18, goldIcon)],
@@ -27,7 +27,7 @@ export class AssetsDictionary {
       [Asset.DOGE, new AssetDetails(Asset.DOGE, 'DOGE', 'DOGE', 18, dogeIcon)],
       [Asset.BAND, new AssetDetails(Asset.BAND, 'BAND', 'BAND', 18, bandIcon)],
       [Asset.USDT, new AssetDetails(Asset.USDT, 'USDT', 'USDT', 18, usdtIcon)],
-      [Asset.WBTC, new AssetDetails(Asset.WBTC, 'BTC', 'BTC', 18, btcIcon)],
+      //[Asset.WBTC, new AssetDetails(Asset.WBTC, 'WBTC', 'WBTC', 18, btcIcon)],
     ],
   );
 

@@ -8,7 +8,7 @@ export function useLending_burn(asset: Asset, weiAmount: string) {
   const account = useAccount();
   const { send, ...rest } = useSendContractTx(
     getLendingContractName(asset),
-    asset === Asset.BTC ? 'burnToBTC' : 'burn',
+    asset === Asset.BNB ? 'burnToBTC' : 'burn',
   );
   return {
     send: (nonce?: number, approveTx?: string | null) => {

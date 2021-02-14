@@ -3,7 +3,7 @@ import { LendingPool } from '../models/lending-pool';
 
 export class LendingPoolDictionary {
   public static pools: Map<Asset, LendingPool> = new Map<Asset, LendingPool>([
-    //[Asset.BTC, new LendingPool('BTC', Asset.BTC, [Asset.JFIN, Asset.GASH])],
+    //[Asset.BNB, new LendingPool('BTC', Asset.BNB, [Asset.JFIN, Asset.GASH])],
     //[Asset.BUSDJ, new LendingPool('BUSDJ', Asset.BUSDJ, [Asset.JFIN])],
     // eslint-disable-next-line
     [Asset.BUSD, new LendingPool('BUSD', Asset.BUSD, [Asset.BUSD, Asset.JFIN, Asset.GASH])],

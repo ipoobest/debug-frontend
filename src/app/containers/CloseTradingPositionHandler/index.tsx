@@ -120,7 +120,7 @@ export function CloseTradingPositionHandler(props: Props) {
 
         {!!props.item.loanId && (
           <div className="mt-4 d-flex flex-row justify-content-between">
-            <AssetWalletBalance asset={Asset.BTC} />
+            <AssetWalletBalance asset={Asset.BNB} />
             <DialogButton
               text={withdrawAll ? 'Close Position' : 'Close Amount'}
               onClick={() => handleConfirmSwap()}

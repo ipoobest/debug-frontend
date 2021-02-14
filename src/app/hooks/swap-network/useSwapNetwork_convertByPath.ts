@@ -13,7 +13,7 @@ export function useSwapNetwork_convertByPath(
 ) {
   const account = useAccount();
   const { send, ...rest } = useSendContractTx(
-    sourceToken === Asset.BTC || targetToken === Asset.BTC
+    sourceToken === Asset.BNB || targetToken === Asset.BNB
       ? 'BTCWrapperProxy'
       : 'swapNetwork',
     'convertByPath',
@@ -28,11 +28,11 @@ export function useSwapNetwork_convertByPath(
 
       let config: any = {
         from: account,
-        value: sourceToken === Asset.BTC ? amount : '0',
+        value: sourceToken === Asset.BNB ? amount : '0',
         nonce,
       };
 
-      if (sourceToken !== Asset.BTC && targetToken !== Asset.BTC) {
+      if (sourceToken !== Asset.BNB && targetToken !== Asset.BNB) {
         args = [
           path,
           amount,

@@ -21,7 +21,7 @@ export function useCloseWithDeposit(
         [loanId, receiver, repayAmount],
         {
           from: account,
-          value: asset === Asset.BTC ? repayAmount : '0',
+          value: asset === Asset.BNB ? repayAmount : '0',
           nonce,
         },
         { type: TxType.CLOSE_WITH_DEPOSIT, approveTransactionHash: approveTx },

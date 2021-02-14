@@ -8,7 +8,7 @@ import {
 } from '../../../utils/sovryn/contract-writer';
 
 function resolveContract(sourceToken: Asset, targetToken: Asset) {
-  return sourceToken === Asset.BTC || targetToken === Asset.BTC
+  return sourceToken === Asset.BNB || targetToken === Asset.BNB
     ? appContracts.BTCWrapperProxy.address
     : appContracts.swapNetwork.address;
 }
@@ -19,7 +19,7 @@ export function useSwapNetwork_approveAndConvertByPath(
   minReturn: string,
 ) {
   let sourceToken = Asset.BUSD;
-  let targetToken = Asset.BTC;
+  let targetToken = Asset.BNB;
   try {
     sourceToken = AssetsDictionary.getByTokenContractAddress(path[0]).asset;
     targetToken = AssetsDictionary.getByTokenContractAddress(
@@ -40,7 +40,7 @@ export function useSwapNetwork_approveAndConvertByPath(
   return {
     send: async () => {
       let tx: CheckAndApproveResult = {};
-      if (sourceToken !== Asset.BTC) {
+      if (sourceToken !== Asset.BNB) {
         tx = await contractWriter.checkAndApprove(
           sourceToken,
           resolveContract(sourceToken, targetToken),
