@@ -45,7 +45,7 @@ export const gasLimit = {
   [TxType.TRADE]: 17500000,
   [TxType.ADD_LIQUIDITY]: 2750000,
   [TxType.REMOVE_LIQUIDITY]: 4500000,
-  [TxType.BORROW]: 13000000,
+  [TxType.BORROW]: 2000000,
   [TxType.CONVERT_BY_PATH]: 5800000,
-  [TxType.LEND]: 2000000,
+  [TxType.LEND]: 500000,
 };

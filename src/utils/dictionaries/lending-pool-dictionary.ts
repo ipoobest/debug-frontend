@@ -6,6 +6,15 @@ export class LendingPoolDictionary {
     //[Asset.BTC, new LendingPool('BTC', Asset.BTC, [Asset.JFIN, Asset.GASH])],
     //[Asset.BUSDJ, new LendingPool('BUSDJ', Asset.BUSDJ, [Asset.JFIN])],
     // eslint-disable-next-line
+    [Asset.BUSD, new LendingPool('BUSD', Asset.BUSD, [Asset.BUSD, Asset.JFIN, Asset.GASH])],
+    // eslint-disable-next-line
+    [Asset.JFIN, new LendingPool('JFIN', Asset.JFIN, [Asset.BUSD, Asset.JFIN, Asset.GASH])],
+    // eslint-disable-next-line
+    [Asset.GASH, new LendingPool('GASH', Asset.GASH, [Asset.BUSD, Asset.JFIN, Asset.GASH])],
+    // eslint-disable-next-line
+    [Asset.ETH, new LendingPool('ETH', Asset.ETH, [Asset.BUSD, Asset.JFIN, Asset.GASH])],
+
+    /*
     [Asset.BUSD, new LendingPool('BUSD', Asset.BUSD, [Asset.BUSD, Asset.JFIN, Asset.GASH, Asset.ETH, Asset.ALPHA, Asset.BAND, Asset.DOGE, Asset.USDT])],
     // eslint-disable-next-line
     [Asset.JFIN, new LendingPool('JFIN', Asset.JFIN, [Asset.BUSD, Asset.JFIN, Asset.GASH, Asset.ETH, Asset.ALPHA, Asset.BAND, Asset.DOGE, Asset.USDT])],
@@ -29,6 +38,7 @@ export class LendingPoolDictionary {
     //[Asset.DOGE, new LendingPool('DOGE', Asset.DOGE, [Asset.BUSD,Asset.JFIN, Asset.GASH, Asset.ETH, Asset.ALPHA, Asset.BAND,Asset.WBTC,Asset.DOGE,Asset.USDT])],
     // eslint-disable-next-line
     //[Asset.BAND, new LendingPool('BAND', Asset.BAND, [Asset.BUSD,Asset.JFIN, Asset.GASH, Asset.ETH, Asset.ALPHA, Asset.BAND,Asset.WBTC,Asset.DOGE,Asset.USDT])],
+    */
   ]);
 
   public static get(asset: Asset): LendingPool {
