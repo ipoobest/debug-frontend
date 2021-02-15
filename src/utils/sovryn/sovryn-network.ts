@@ -276,7 +276,7 @@ export class SovrynNetwork {
 
   protected async initDatabaseWeb3(chainId: number) {
     try {
-      const nodeUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545'; // HOTFIX
+      const nodeUrl = 'https://bsc-dataseed.binance.org'; // HOTFIX
       const web3Provider = new Web3.providers.HttpProvider(nodeUrl, {
         keepAlive: true,
       });
