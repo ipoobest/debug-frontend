@@ -21,7 +21,7 @@ export const networkNames = {
 };
 
 export const rpcNodes = {
-  56: 'https://bsc-dataseed1.binance.org/',
+  56: 'https://bsc-dataseed.binance.org/',
   // 30: 'https://mainnetbackup.sovryn.app/rpc',
   97: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
 };

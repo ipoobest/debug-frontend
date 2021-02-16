@@ -56,14 +56,21 @@ export class SovrynNetwork {
   public databaseContractList: Contract[] = [];
 
   constructor() {
+    this.initReadWeb3(currentChainId).then().catch();
+
+    if (window.ethereum) {
+      console.log(window.ethereum);
+    }
+
     this._web3Modal = new Web3Modal({
+      network: "mainnet",
       disableInjectedProvider: false,
-      cacheProvider: true,
+      // cacheProvider: true,
+      cacheProvider: false,
       providerOptions: this._providerOptions,
       theme: themeColors,
     });
 
-    this.initReadWeb3(currentChainId).then().catch();
 
     if (this._web3Modal.cachedProvider) {
       this.connect().then().catch();
@@ -229,6 +236,8 @@ export class SovrynNetwork {
   }
 
   protected async initReadWeb3(chainId: number) {
+    console.log('initReadWeb3', chainId);
+
     try {
       if (
         !this._readWeb3 ||
@@ -284,6 +293,9 @@ export class SovrynNetwork {
       Array.from(Object.keys(appContracts)).forEach(key => {
         this.addDatabaseContract(key, appContracts[key]);
       });
+
+      console.log('initDatabaseWeb3', this._databaseWeb3);
+      console.log('database of contracts', this.databaseContracts);
     } catch (e) {
       console.error('init database web3 fails.');
       console.error(e);
@@ -335,6 +347,7 @@ export class SovrynNetwork {
       const accounts = await this._writeWeb3.eth.getAccounts();
 
       const address = accounts[0];
+      console.log('Account Address', address);
       const networkId = await this._writeWeb3.eth.net.getId();
       const chainId = await (this._writeWeb3.eth as any).chainId();
 
