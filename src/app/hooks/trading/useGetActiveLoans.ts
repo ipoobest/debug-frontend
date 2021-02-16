@@ -28,7 +28,7 @@ export function useGetActiveLoans(
   unsafeOnly: boolean = false,
 ) {
   return useCacheCallWithValue(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'getUserLoans',
     [],
     account,

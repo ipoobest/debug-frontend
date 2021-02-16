@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Sovryn } from '../../utils/sovryn';
+import { Jrepo } from '../../utils/jrepo';
 
 const mailSrv = process.env.REACT_APP_MAIL_SRV;
 
@@ -31,7 +31,7 @@ export function updateUser(
 
   const message = `${timestamp} \n \n Please confirm that the details associated with this account will now be: \n \n Username: ${name} \n Email: ${email}`;
 
-  Sovryn.getWriteWeb3()
+  Jrepo.getWriteWeb3()
     .eth.personal.sign(message, walletAddress, '')
     .then(res =>
       axios

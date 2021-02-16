@@ -158,7 +158,7 @@
     "constant": false,
     "inputs": [
       { "name": "_path", "type": "address[]" },
-      { "name": "_sovrynSwapX", "type": "address" },
+      { "name": "_jrepoSwapX", "type": "address" },
       { "name": "_conversionId", "type": "uint256" },
       { "name": "_minReturn", "type": "uint256" },
       { "name": "_beneficiary", "type": "address" }

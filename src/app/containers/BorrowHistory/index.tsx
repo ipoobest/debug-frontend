@@ -24,7 +24,7 @@ export function BorrowHistory(props: Props) {
   const { t } = useTranslation();
 
   const { events, loading } = useGetContractPastEvents(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'Borrow',
   );
 
@@ -99,8 +99,8 @@ export function BorrowHistory(props: Props) {
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
   return (
-    <div className="bg-white sovryn-border p-3">
-      <table {...getTableProps()} className="sovryn-table">
+    <div className="bg-white jrepo-border p-3">
+      <table {...getTableProps()} className="jrepo-table">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

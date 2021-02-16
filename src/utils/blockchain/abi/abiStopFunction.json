@@ -941,7 +941,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "sovrynContractAddress",
+    "name": "jrepoContractAddress",
     "outputs": [
       {
         "internalType": "address",
@@ -1200,7 +1200,7 @@
       },
       {
         "internalType": "address",
-        "name": "_sovrynContractAddress",
+        "name": "_jrepoContractAddress",
         "type": "address"
       },
       {
@@ -1655,7 +1655,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "sovrynContractAddress",
+    "name": "jrepoContractAddress",
     "outputs": [
       {
         "internalType": "address",
@@ -2271,7 +2271,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "sovrynContractAddress",
+    "name": "jrepoContractAddress",
     "outputs": [
       {
         "internalType": "address",

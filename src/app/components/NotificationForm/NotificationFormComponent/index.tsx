@@ -96,7 +96,7 @@ export function NotificationFormComponent(props: Props) {
           }`}
         >
           <StyledButton
-            className="sovryn-border float-right"
+            className="jrepo-border float-right"
             type="submit"
             onClick={e => props.onSubmit(e, props.formType)}
             disabled={!props.email || !props.name}

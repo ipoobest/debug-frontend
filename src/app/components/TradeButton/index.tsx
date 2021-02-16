@@ -22,7 +22,7 @@ export function TradeButton(props: Props) {
     <StyledButton
       type={props.type}
       disabled={props.disabled}
-      className="sovryn-border"
+      className="jrepo-border"
       textColor={props.textColor}
       onClick={() => props.onClick()}
     >

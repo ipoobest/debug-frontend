@@ -10,7 +10,7 @@ import { useAccount } from '../../../hooks/useAccount';
 import { NotificationFormComponent } from '../NotificationFormComponent';
 import { EmailNotificationButton } from '../EmailNotificationButton';
 import { CustomDialog } from '../../CustomDialog';
-import { Sovryn } from '../../../../utils/sovryn';
+import { Jrepo } from '../../../../utils/jrepo';
 
 export function NotificationForm() {
   const mailSrv = process.env.REACT_APP_MAIL_SRV;
@@ -82,7 +82,7 @@ export function NotificationForm() {
     const message = `${timestamp} \n \n Please confirm that the details associated with this account will now be: \n \n Username: ${name} \n Email: ${email}`;
     const route = formType === 'signup' ? 'addUser' : 'updateUser';
 
-    Sovryn.getWriteWeb3()
+    Jrepo.getWriteWeb3()
       .eth.personal.sign(message, walletAddress, '')
       .then(res =>
         axios

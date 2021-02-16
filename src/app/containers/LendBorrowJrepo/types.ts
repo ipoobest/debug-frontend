@@ -2,7 +2,7 @@
 import { Asset } from 'types/asset';
 import { Nullable } from 'types';
 
-export interface LendBorrowSovrynState {
+export interface LendBorrowJrepoState {
   tab: TabType;
   asset: Asset;
   collateral: Nullable<Asset>;
@@ -17,4 +17,4 @@ export enum TabType {
   BORROW = 'borrow',
 }
 
-export type ContainerState = LendBorrowSovrynState;
+export type ContainerState = LendBorrowJrepoState;

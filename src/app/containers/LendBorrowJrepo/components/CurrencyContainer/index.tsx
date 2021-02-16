@@ -7,7 +7,7 @@ import CurrencyRow from './CurrencyRow';
 import { Asset } from '../../../../../types/asset';
 import { useWeiAmount } from '../../../../hooks/useWeiAmount';
 import { LendingPoolDictionary } from '../../../../../utils/dictionaries/lending-pool-dictionary';
-import { selectLendBorrowSovryn } from '../../selectors';
+import { selectLendBorrowJrepo } from '../../selectors';
 
 type Props = {
   state: Asset;
@@ -17,7 +17,7 @@ type Props = {
 const currencyRows = LendingPoolDictionary.list();
 
 const CurrencyContainer: React.FC<Props> = ({ state, setState }) => {
-  const { borrowAmount, lendAmount } = useSelector(selectLendBorrowSovryn);
+  const { borrowAmount, lendAmount } = useSelector(selectLendBorrowJrepo);
   const weiBorrowAmount = useWeiAmount(borrowAmount);
   const weiLendAmount = useWeiAmount(lendAmount);
   return (

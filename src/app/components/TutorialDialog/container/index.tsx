@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useIsConnected } from 'app/hooks/useAccount';
-import { Sovryn } from 'utils/sovryn';
+import { Jrepo } from 'utils/jrepo';
 import { TutorialDialogComponent } from '../component';
 import { MobileNotReady } from '../mobileNotReady';
 import { currentChainId } from 'utils/classifiers';
@@ -26,7 +26,7 @@ export function TutorialDialog() {
   };
 
   const handleWalletConnection = useCallback(() => {
-    Sovryn.connect()
+    Jrepo.connect()
       .then(() => {})
       .catch(err => {
         console.error(err);

@@ -42,11 +42,11 @@ export function ActiveUserLoans(props: Props) {
             <>
               Need help making a transaction? Read our guide on{' '}
               <a
-                href="https://sovryn.app/blog/how-to-earn-and-leverage-bitcoin.html"
+                href="https://jrepo.app/blog/how-to-earn-and-leverage-bitcoin.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                how to trade and lend with Sovryn
+                how to trade and lend with Jrepo
               </a>
               .
             </>

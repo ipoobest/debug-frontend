@@ -1,5 +1,5 @@
 {
-  "name": "sovryn-app",
+  "name": "jrepo-app",
   "version": "0.2.0",
   "private": true,
   "dependencies": {
@@ -233,7 +233,7 @@
       "^.+\\.module\\.(css|sass|scss)$"
     ],
     "modulePaths": [
-      "/Users/rytis/Projects/sovryn/sovryn-app/src"
+      "/Users/rytis/Projects/jrepo/jrepo-app/src"
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",

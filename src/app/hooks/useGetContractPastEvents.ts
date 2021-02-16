@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { EventData } from 'web3-eth-contract';
 import { ContractName } from '../../utils/types/contracts';
 import { selectWalletProvider } from '../containers/WalletProvider/selectors';
-import { eventReader } from '../../utils/sovryn/event-reader';
+import { eventReader } from '../../utils/jrepo/event-reader';
 import { getContract } from '../../utils/blockchain/contract-helpers';
 
 const filtersEventKeyMap = {

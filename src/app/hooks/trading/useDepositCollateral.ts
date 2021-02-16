@@ -11,7 +11,7 @@ export function useDepositCollateral(
 ) {
   const account = useAccount();
   const { send, ...rest } = useSendContractTx(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'depositCollateral',
   );
 

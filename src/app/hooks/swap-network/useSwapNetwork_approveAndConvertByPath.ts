@@ -5,7 +5,7 @@ import { useSwapNetwork_convertByPath } from './useSwapNetwork_convertByPath';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from '../../../utils/sovryn/contract-writer';
+} from '../../../utils/jrepo/contract-writer';
 
 function resolveContract(sourceToken: Asset, targetToken: Asset) {
   return sourceToken === Asset.BNB || targetToken === Asset.BNB

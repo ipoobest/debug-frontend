@@ -18,14 +18,14 @@ export function HintHowToConnect() {
           i18nKey={translations.hintHowToConnect.hintTwo}
           components={[
             <a
-              href="https://sovryn.app/blog/metamask-wallet-for-sovryn.html"
+              href="https://jrepo.app/blog/metamask-wallet-for-jrepo.html"
               target="_blank"
               rel="noopener noreferrer"
             >
               Metamask
             </a>,
             <a
-              href="https://sovryn.app/blog/using-nifty-wallet-for-sovryn.html"
+              href="https://jrepo.app/blog/using-nifty-wallet-for-jrepo.html"
               target="_blank"
               rel="noopener noreferrer"
             >

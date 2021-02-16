@@ -1,7 +1,7 @@
 /**
  * Do not import this file directly.
  * Use getContract(contractName) helper
- * @example getContract('sovrynProtocol');
+ * @example getContract('jrepoProtocol');
  */
 
 import bzxAbi from './abi/bzxAbi.json';
@@ -12,12 +12,12 @@ import abiTestWBRTCToken from './abi/abiTestWBRTCToken.json';
 //import LoanTokenLogicWrbtc from './abi/LoanTokenLogicWrbtc.json';
 import LoanTokenLogicStandard from './abi/LoanTokenLogicStandard.json';
 import TestTokenABI from './abi/abiTestToken.json';
-import SwapNetworkABI from './abi/SovrynSwapNetwork.json';
+import SwapNetworkABI from './abi/JrepoSwapNetwork.json';
 import ConverterRegistryABI from './abi/ConverterRegistry.json';
 import RBTCWrapperProxy from './abi/RBTCWrapperProxy.json';
 
 export const contracts = {
-  sovrynProtocol: {
+  jrepoProtocol: {
     address: '0xf263906c77C64f8426dEa674891c80d894880dDA',
     abi: bzxAbi,
     blockNumber: 4613455,

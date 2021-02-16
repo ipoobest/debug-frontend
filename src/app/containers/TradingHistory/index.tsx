@@ -169,9 +169,9 @@ export function TradingHistory() {
   const { t } = useTranslation();
   const account = useAccount();
 
-  const tradeStates = useGetContractPastEvents('sovrynProtocol', 'Trade');
+  const tradeStates = useGetContractPastEvents('jrepoProtocol', 'Trade');
   const closeStates = useGetContractPastEvents(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'CloseWithSwap',
   );
 
@@ -332,8 +332,8 @@ function HistoryTable(props: { items: CalculatedEvent[] }) {
   } = useTable({ columns, data }, useSortBy);
 
   return (
-    <div className="bg-white p-3 sovryn-border">
-      <table {...getTableProps()} className="sovryn-table">
+    <div className="bg-white p-3 jrepo-border">
+      <table {...getTableProps()} className="jrepo-table">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

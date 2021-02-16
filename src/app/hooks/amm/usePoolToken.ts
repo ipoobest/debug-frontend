@@ -7,7 +7,7 @@ import {
 } from 'utils/blockchain/contract-helpers';
 import TokenAbi from 'utils/blockchain/abi/abiTestToken.json';
 import { ethGenesisAddress } from 'utils/classifiers';
-import { Sovryn } from 'utils/sovryn';
+import { Jrepo } from 'utils/jrepo';
 import { LiquidityPoolDictionary } from 'utils/dictionaries/liquidity-pool-dictionary';
 import { useCacheCallWithValue } from '../useCacheCallWithValue';
 
@@ -43,21 +43,21 @@ export function useLocalPoolToken(pool: Asset, asset: Asset) {
     if (value && value !== ethGenesisAddress) {
       const contractName = getPoolTokenContractName(pool, asset);
       if (
-        !Sovryn.writeContracts.hasOwnProperty(contractName) &&
-        Sovryn.writeContracts[contractName]?.options?.address.toLowerCase() !==
+        !Jrepo.writeContracts.hasOwnProperty(contractName) &&
+        Jrepo.writeContracts[contractName]?.options?.address.toLowerCase() !==
           value.toLowerCase()
       ) {
-        Sovryn.addWriteContract(contractName, {
+        Jrepo.addWriteContract(contractName, {
           address: value,
           abi: TokenAbi as any,
         });
       }
       if (
-        !Sovryn.contracts.hasOwnProperty(contractName) &&
-        Sovryn.contracts[contractName]?.options?.address.toLowerCase() !==
+        !Jrepo.contracts.hasOwnProperty(contractName) &&
+        Jrepo.contracts[contractName]?.options?.address.toLowerCase() !==
           value.toLowerCase()
       ) {
-        Sovryn.addReadContract(contractName, {
+        Jrepo.addReadContract(contractName, {
           address: value,
           abi: TokenAbi as any,
         });

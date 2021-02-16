@@ -9,8 +9,8 @@ import {
 } from 'redux-saga/effects';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { TransactionReceipt } from 'web3-core';
-import { Sovryn } from 'utils/sovryn';
-import { contractReader } from 'utils/sovryn/contract-reader';
+import { Jrepo } from 'utils/jrepo';
+import { contractReader } from 'utils/jrepo/contract-reader';
 import { selectWalletProvider } from './selectors';
 import { actions } from './slice';
 import { selectTransactionStack } from '../../../store/global/transactions-store/selectors';
@@ -52,7 +52,7 @@ function createBlockChannels({ web3 }) {
 }
 
 function* callCreateBlockChannels() {
-  const web3 = Sovryn.getWeb3();
+  const web3 = Jrepo.getWeb3();
   const blockChannel = yield call(createBlockChannels, { web3 });
 
   try {
@@ -68,7 +68,7 @@ function* callCreateBlockChannels() {
 function* processBlockHeader(event) {
   const { address, processedBlocks } = yield select(selectWalletProvider);
   const blockNumber = event.payload.number;
-  const web3 = Sovryn.getWeb3();
+  const web3 = Jrepo.getWeb3();
 
   try {
     const previousBlocks = Array(5)
@@ -119,7 +119,7 @@ function* processBlock({ block, address }) {
 
         if (localTransactions.includes(hash) || from === user || to === user) {
           const receipt: TransactionReceipt = yield call(
-            [Sovryn, Sovryn.getWeb3().eth.getTransactionReceipt],
+            [Jrepo, Jrepo.getWeb3().eth.getTransactionReceipt],
             hash,
           );
           if (receipt?.status) {
@@ -133,7 +133,7 @@ function* processBlock({ block, address }) {
           );
         }
 
-        const hasContract = Sovryn.contractList.find(contract => {
+        const hasContract = Jrepo.contractList.find(contract => {
           const contractAddress = contract.options.address.toLowerCase();
           return contractAddress === from || contractAddress === to;
         });

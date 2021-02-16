@@ -31,7 +31,7 @@ const CurrencyRow: React.FC<Props> = ({
   return (
     <div
       className={clsx(
-        'sovryn-border px-3 py-1 py-lg-2 currency-container font-family-work-sans mb-2 text-muted',
+        'jrepo-border px-3 py-1 py-lg-2 currency-container font-family-work-sans mb-2 text-muted',
         active && 'currency-container__active',
       )}
     >

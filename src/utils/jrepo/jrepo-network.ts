@@ -25,8 +25,8 @@ const themeColors: ThemeColors = {
   hover: 'var(--secondary)',
 };
 
-export class SovrynNetwork {
-  private static _instance?: SovrynNetwork;
+export class JrepoNetwork {
+  private static _instance?: JrepoNetwork;
   private _store = store;
 
   private _web3Modal: Web3Modal;
@@ -63,14 +63,13 @@ export class SovrynNetwork {
     }
 
     this._web3Modal = new Web3Modal({
-      network: "mainnet",
+      network: 'mainnet',
       disableInjectedProvider: false,
       // cacheProvider: true,
       cacheProvider: false,
       providerOptions: this._providerOptions,
       theme: themeColors,
     });
-
 
     if (this._web3Modal.cachedProvider) {
       this.connect().then().catch();
@@ -83,7 +82,7 @@ export class SovrynNetwork {
 
   public static Instance() {
     if (!this._instance) {
-      this._instance = new SovrynNetwork();
+      this._instance = new JrepoNetwork();
     }
     return this._instance;
   }

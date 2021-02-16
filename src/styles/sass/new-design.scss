@@ -1,4 +1,4 @@
-.sovryn-border {
+.jrepo-border {
   border-bottom: 5px;
   border-right: 5px;
   border-top: 1px;
@@ -8,20 +8,20 @@
   // border-color: $white;
   border-color: var(--border-color-main);
 }
-.sovryn-border-left {
+.jrepo-border-left {
   border-left: 1px solid $white;
 }
-.sovryn-border-top {
+.jrepo-border-top {
   border-top: 1px solid $white;
 }
-.sovryn-border-bottom {
+.jrepo-border-bottom {
   border-bottom: 5px solid $white;
 }
-.sovryn-border-right {
+.jrepo-border-right {
   border-right: 5px solid $white;
 }
 
-.sovryn-tabs {
+.jrepo-tabs {
   background: none !important;
 
   .tab-content {
@@ -92,7 +92,7 @@
   //}
 }
 
-.sovryn-tabs .custom-stats-tab {
+.jrepo-tabs .custom-stats-tab {
   border: none!important;
   &.charts-active {
     color: var(--gold);
@@ -108,13 +108,13 @@
   text-transform: uppercase;
 }
 
-.sovryn-table {
+.jrepo-table {
   font-family: var(--secondary-font);
   font-weight: 400;
   width: 100%;
   background: var(--white);
 
-  &.sovryn-table-mobile {
+  &.jrepo-table-mobile {
     font-size: 12px;
     @media(max-width: 335px) {
       font-size: 11px;
@@ -150,7 +150,7 @@
   .sub-header div {
     font-size: 8px;
   }
-  &.sovryn-table-mobile {
+  &.jrepo-table-mobile {
     [class^='col'] {
       padding-left: 5px;
       padding-right: 5px;
@@ -175,7 +175,7 @@ input {
 
 
 .bp3-dialog {
-  @extend .sovryn-border;
+  @extend .jrepo-border;
   // @extend .bg-primary;
   @extend .bg-white;
   @extend .p-3;
@@ -184,7 +184,7 @@ input {
 .bp3-popover {
   &.bp3-select-popover {
     & .bp3-popover-content {
-      // @extend .sovryn-border;
+      // @extend .jrepo-border;
       @extend .border-gold;
       @extend .bg-white;
       @extend .text-black;
@@ -206,7 +206,7 @@ input {
 
   &, &.bp3-tooltip {
     & .bp3-popover-content {
-      // @extend .sovryn-border;
+      // @extend .jrepo-border;
       // @extend .bg-primary;
       @extend .border-gold;
       @extend .bg-white;
@@ -239,7 +239,7 @@ input {
 }
 
 .bp3-toast {
-  @extend .sovryn-border;
+  @extend .jrepo-border;
   background-color: var(--primary);
 }
 
@@ -256,7 +256,7 @@ input {
 }
 
 .web3modal-modal-card {
-  @extend .sovryn-border;
+  @extend .jrepo-border;
   @extend .font-family-work-sans;
 }
 

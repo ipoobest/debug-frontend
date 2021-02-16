@@ -30,8 +30,8 @@ export function useGetLoan() {
   useEffect(() => {
     // @ts-ignore
     web3ContractRef.current = getWeb3Contract(
-      appContracts.sovrynProtocol.address,
-      appContracts.sovrynProtocol.abi,
+      appContracts.jrepoProtocol.address,
+      appContracts.jrepoProtocol.abi,
     );
   }, []);
 

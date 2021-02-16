@@ -17,7 +17,7 @@ import { StatsPage } from './containers/StatsPage/Loadable';
 import { WalletProvider } from './containers/WalletProvider';
 //import { LiquidityPage } from './containers/LiquidityPage/Loadable';
 import { currentNetwork } from '../utils/classifiers';
-import LendBorrowSovryn from './containers/LendBorrowSovryn';
+import LendBorrowJrepo from './containers/LendBorrowJrepo';
 //import { TradingPage } from './containers/TradingPage/Loadable';
 //import { SandboxPage } from './containers/SandboxPage/Loadable';
 import { EmailPage } from './containers/EmailPage';
@@ -74,8 +74,8 @@ export function App() {
       <WalletProvider>
         <TutorialDialog />
         <Switch>
-          <Route exact path="/" component={LendBorrowSovryn} />
-          <Route exact path="/lend" component={LendBorrowSovryn} />
+          <Route exact path="/" component={LendBorrowJrepo} />
+          <Route exact path="/lend" component={LendBorrowJrepo} />
           <Route exact path="/stats" component={StatsPage} />
           <Route exact path="/wallet" component={WalletPage} />
           <Route

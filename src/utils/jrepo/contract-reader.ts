@@ -1,13 +1,13 @@
 import { RevertInstructionError } from 'web3-core-helpers';
-import { SovrynNetwork } from './sovryn-network';
-import { Sovryn } from './index';
+import { JrepoNetwork } from './jrepo-network';
+import { Jrepo } from './index';
 import { ContractName } from '../types/contracts';
 
 class ContractReader {
-  private sovryn: SovrynNetwork;
+  private jrepo: JrepoNetwork;
 
   constructor() {
-    this.sovryn = Sovryn;
+    this.jrepo = Jrepo;
   }
 
   /**
@@ -21,7 +21,7 @@ class ContractReader {
     methodName: string,
     args: Array<any>,
   ): Promise<T> {
-    return this.sovryn.contracts[contractName].methods[methodName](
+    return this.jrepo.contracts[contractName].methods[methodName](
       ...args,
     ).call();
   }

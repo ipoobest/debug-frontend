@@ -1,8 +1,8 @@
-# Sovryn App
+# Jrepo App
 
 ---
 
-[![buddy pipeline](https://app.buddy.works/sovryn/sovryn-frontend/pipelines/pipeline/280478/badge.svg?token=ed1cb69cbee6a52696a31b1f9060030fefe88ab6573a2f51dd45064a1470eeb7 'buddy pipeline')](https://app.buddy.works/sovryn/sovryn-frontend/pipelines/pipeline/280478)
+[![buddy pipeline](https://app.buddy.works/jrepo/jrepo-frontend/pipelines/pipeline/280478/badge.svg?token=ed1cb69cbee6a52696a31b1f9060030fefe88ab6573a2f51dd45064a1470eeb7 'buddy pipeline')](https://app.buddy.works/jrepo/jrepo-frontend/pipelines/pipeline/280478)
 
 ## Install & Start
 

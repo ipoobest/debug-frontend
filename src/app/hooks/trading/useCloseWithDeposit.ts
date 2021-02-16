@@ -10,7 +10,7 @@ export function useCloseWithDeposit(
   repayAmount,
 ) {
   const { send, ...rest } = useSendContractTx(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'closeWithDeposit',
   );
   const account = useAccount();

@@ -34,7 +34,7 @@ export function LiquidityPage(props: Props) {
       <div className="container mt-5">
         <div className="row">
           <div className="col-12 col-lg-6 order-lg-0 pr-lg-5">
-            <div className="sovryn-tabs">
+            <div className="jrepo-tabs">
               <Tabs defaultActiveKey={TabType.ADD} id="trade-n-swap-tabs">
                 <Tab
                   eventKey={(TabType.ADD as unknown) as string}

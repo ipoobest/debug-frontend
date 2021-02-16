@@ -3,9 +3,9 @@ import { RootState } from 'types';
 import { initialState } from './slice';
 
 const selectDomain = (state: RootState) =>
-  state.lendBorrowSovryn || initialState;
+  state.lendBorrowJrepo || initialState;
 
-export const selectLendBorrowSovryn = createSelector(
+export const selectLendBorrowJrepo = createSelector(
   [selectDomain],
-  lendBorrowSovrynState => lendBorrowSovrynState,
+  lendBorrowJrepoState => lendBorrowJrepoState,
 );

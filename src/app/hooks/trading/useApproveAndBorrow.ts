@@ -4,7 +4,7 @@ import { useBorrow } from './useBorrow';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from '../../../utils/sovryn/contract-writer';
+} from '../../../utils/jrepo/contract-writer';
 
 export function useApproveAndBorrow(
   borrowToken: Asset,

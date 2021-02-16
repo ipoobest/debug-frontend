@@ -84,7 +84,7 @@ export function TradingPairSelector(props: Props) {
         targetTagName: 'div',
       }}
     >
-      <button className="w-100 sovryn-border bg-dark text-white mb-4 d-flex flex-row justify-content-between align-items-center p-0">
+      <button className="w-100 jrepo-border bg-dark text-white mb-4 d-flex flex-row justify-content-between align-items-center p-0">
         <span className="px-3 pr-4 d-flex flex-row align-items-center justify-content-between flex-shrink-0 flex-grow-1">
           {selected ? (
             <>
@@ -106,7 +106,7 @@ export function TradingPairSelector(props: Props) {
             <Text ellipsize>Select trade pair</Text>
           )}
         </span>
-        <span className="sovryn-border-left px-2 py-3 px-lg-4">
+        <span className="jrepo-border-left px-2 py-3 px-lg-4">
           <Icon icon="caret-down" />
         </span>
       </button>

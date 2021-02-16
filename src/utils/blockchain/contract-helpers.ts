@@ -1,6 +1,6 @@
 import { Asset } from 'types/asset';
 import { AssetsDictionary } from '../dictionaries/assets-dictionary';
-import { Sovryn } from '../sovryn';
+import { Jrepo } from '../jrepo';
 import { ContractName } from '../types/contracts';
 import { appContracts } from './app-contracts';
 
@@ -26,7 +26,7 @@ export const getAmmContractName = (asset: Asset) =>
   AssetsDictionary.get(asset).getAmmContractName() as ContractName;
 
 export const getWeb3Contract = (address: string, abi: any) => {
-  const web3 = Sovryn.getWeb3();
+  const web3 = Jrepo.getWeb3();
   return new web3.eth.Contract(abi, address);
 };
 
@@ -35,9 +35,9 @@ export const getContract = (contractName: ContractName) => {
 };
 
 export const getContractNameByAddress = (address: string): ContractName => {
-  return Object.keys(Sovryn.contracts).find(
+  return Object.keys(Jrepo.contracts).find(
     key =>
-      Sovryn.contracts[key].options.address.toLowerCase() ===
+      Jrepo.contracts[key].options.address.toLowerCase() ===
       address.toLowerCase(),
   ) as ContractName;
 };

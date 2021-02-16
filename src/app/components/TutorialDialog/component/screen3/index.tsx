@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { translations } from 'locales/i18n';
 import { useTranslation } from 'react-i18next';
 import badgerQr from 'assets/images/tutorial/badger_qr.svg';
-import { Sovryn } from 'utils/sovryn';
+import { Jrepo } from 'utils/jrepo';
 
 export function Screen3() {
   const { t } = useTranslation();
   // const [wrongNetwork, setWrongNetwork] = useState(false);
 
   function connect() {
-    Sovryn.connectTo('walletconnect');
+    Jrepo.connectTo('walletconnect');
   }
 
   useEffect(() => {

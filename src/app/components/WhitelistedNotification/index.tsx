@@ -12,7 +12,7 @@ export function WhitelistedNotification() {
 
   return (
     <div className="container mt-6 mb-4">
-      <div className="bg-info sovryn-border rounded p-3 d-flex flex-row justify-content-start align-items-center">
+      <div className="bg-info jrepo-border rounded p-3 d-flex flex-row justify-content-start align-items-center">
         <div className="ml-3 mr-4">
           <Icon icon="warning-sign" iconSize={26} />
         </div>

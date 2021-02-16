@@ -3,7 +3,7 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { call, put, takeLatest, takeEvery, select } from 'redux-saga/effects';
 import { actions as walletActions } from 'app/containers/WalletProvider/slice';
 import { AssetsDictionary } from 'utils/dictionaries/assets-dictionary';
-import { eventReader } from 'utils/sovryn/event-reader';
+import { eventReader } from 'utils/jrepo/event-reader';
 import { LoadEventsParams } from './types';
 import { actions } from './slice';
 import { selectEventsState } from './selectors';
@@ -41,7 +41,7 @@ function* preloadUserEvents({ payload }: PayloadAction<string>) {
     yield put(
       actions.loadEvents({
         address: payload,
-        contractName: 'sovrynProtocol',
+        contractName: 'jrepoProtocol',
         eventName,
         filters: { user: payload },
       }),

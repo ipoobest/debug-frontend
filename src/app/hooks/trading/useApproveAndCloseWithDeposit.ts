@@ -4,7 +4,7 @@ import { getContract } from '../../../utils/blockchain/contract-helpers';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from '../../../utils/sovryn/contract-writer';
+} from '../../../utils/jrepo/contract-writer';
 
 export function useApproveAndCloseWithDeposit(
   borrowToken: Asset,
@@ -26,7 +26,7 @@ export function useApproveAndCloseWithDeposit(
       if (borrowToken !== Asset.BNB) {
         tx = await contractWriter.checkAndApprove(
           borrowToken,
-          getContract('sovrynProtocol').address,
+          getContract('jrepoProtocol').address,
           repayAmount,
         );
         if (tx.rejected) {

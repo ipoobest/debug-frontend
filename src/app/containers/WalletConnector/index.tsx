@@ -10,10 +10,10 @@ import {
 } from '@blueprintjs/core';
 import styled from 'styled-components';
 
-import '../LendBorrowSovryn/assets/index.scss';
+import '../LendBorrowJrepo/assets/index.scss';
 import { useSelector } from 'react-redux';
 import { prettyTx } from 'utils/helpers';
-import { Sovryn } from 'utils/sovryn';
+import { Jrepo } from '../../../utils/jrepo';
 import { translations } from 'locales/i18n';
 import { selectWalletProvider } from '../WalletProvider/selectors';
 import { media } from '../../../styles/media';
@@ -27,13 +27,13 @@ const WalletConnectorContainer: React.FC<Props> = props => {
   const history = useHistory();
 
   const handleWalletConnection = useCallback(() => {
-    Sovryn.connect()
+    Jrepo.connect()
       .then(() => {})
       .catch(console.error);
   }, []);
 
   const handleDisconnect = () => {
-    Sovryn.disconnect().then(() => {});
+    Jrepo.disconnect().then(() => {});
   };
 
   return (

@@ -24,10 +24,10 @@ export function Screen3(props) {
   }
 
   const deepLinks = {
-    Metamask: 'https://metamask.app.link/dapp/live.sovryn.app/',
+    Metamask: 'https://metamask.app.link/dapp/live.jrepo.app/',
     Trust:
       'https://links.trustwalletapp.com/a/key_live_lfvIpVeI9TFWxPCqwU8rZnogFqhnzs4D?&event=openURL&url=' +
-      'live.sovryn.app',
+      'live.jrepo.app',
   };
 
   return (

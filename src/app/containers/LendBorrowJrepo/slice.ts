@@ -14,8 +14,8 @@ export const initialState: ContainerState = {
   repayModalOpen: false,
 };
 
-const lendBorrowSovrynSlice = createSlice({
-  name: 'lendBorrowSovryn',
+const lendBorrowJrepoSlice = createSlice({
+  name: 'lendBorrowJrepo',
   initialState,
   reducers: {
     changeTab(state, { payload }: PayloadAction<TabType>) {
@@ -44,4 +44,4 @@ const lendBorrowSovrynSlice = createSlice({
   },
 });
 
-export const { actions, reducer, name: sliceKey } = lendBorrowSovrynSlice;
+export const { actions, reducer, name: sliceKey } = lendBorrowJrepoSlice;

@@ -22,7 +22,7 @@ export function InfoBox(props: Props) {
 
   return (
     <div className={`my-3 d-none ${show && 'd-block'}`}>
-      <div className="p-3 sovryn-border">
+      <div className="p-3 jrepo-border">
         <Button
           icon="cross"
           onClick={() => closeInfoBox()}

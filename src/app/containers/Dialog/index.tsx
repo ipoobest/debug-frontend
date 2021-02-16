@@ -21,7 +21,7 @@ export function Dialog(props: Props) {
     <BPDialog
       isOpen={props.isOpen}
       onClose={() => props.onClose()}
-      // className="bg-primary sovryn-border p-3"
+      // className="bg-primary jrepo-border p-3"
     >
       {props.isCloseButtonShown && (
         <div className="mb-3 text-right">

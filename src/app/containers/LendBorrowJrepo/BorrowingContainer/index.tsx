@@ -14,7 +14,7 @@ import { useApproveAndBorrow } from '../../../hooks/trading/useApproveAndBorrow'
 import { useIsAmountWithinLimits } from '../../../hooks/useIsAmountWithinLimits';
 import '../assets/index.scss';
 import { Asset } from '../../../../types/asset';
-import { useSovryn_getRequiredCollateral } from '../../../hooks/protocol/useSovryn_getRequiredCollateral';
+import { useJrepo_getRequiredCollateral } from '../../../hooks/protocol/useJrepo_getRequiredCollateral';
 import { AssetsDictionary } from '../../../../utils/dictionaries/assets-dictionary';
 import { FormSelect } from '../../../components/FormSelect';
 import { FieldGroup } from '../../../components/FieldGroup';
@@ -76,7 +76,7 @@ const BorrowingContainer: React.FC<Props> = ({ currency }) => {
   const tokenToBorrow = currency;
   const initialLoanDuration = 60 * 60 * 24 * borrowDays;
 
-  const { value: requiredCollateral } = useSovryn_getRequiredCollateral(
+  const { value: requiredCollateral } = useJrepo_getRequiredCollateral(
     tokenToBorrow,
     tokenToCollarate,
     borrowAmount,

@@ -90,8 +90,8 @@ export function ActiveLoanTableMobile(props: Props) {
   });
 
   return (
-    <div className="bg-white sovryn-border p-3 d-block d-md-none">
-      <div className="sovryn-table sovryn-table-mobile p-3">
+    <div className="bg-white jrepo-border p-3 d-block d-md-none">
+      <div className="jrepo-table jrepo-table-mobile p-3">
         <div className="row table-header">
           <div className="col-2" />
           <div className="col-4">

@@ -7,7 +7,7 @@ import {
 import {
   CheckAndApproveResult,
   contractWriter,
-} from 'utils/sovryn/contract-writer';
+} from 'utils/jrepo/contract-writer';
 import { useRemoveLiquidity } from './useRemoveLiquidity';
 import { toWei } from '../../../utils/blockchain/math-helpers';
 

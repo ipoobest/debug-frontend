@@ -12,7 +12,7 @@ import {
 } from 'store/global/transactions-store/types';
 import { actions } from 'store/global/transactions-store/slice';
 import { Asset } from 'types/asset';
-import { contractWriter } from 'utils/sovryn/contract-writer';
+import { contractWriter } from 'utils/jrepo/contract-writer';
 import { ContractName } from 'utils/types/contracts';
 import { useAccount } from './useAccount';
 import { Nullable } from 'types';

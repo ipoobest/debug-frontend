@@ -43,7 +43,7 @@ export function UserAssets() {
           </div>
         )}
       </div>
-      <div className="sovryn-border sovryn-table p-3 mb-5">
+      <div className="jrepo-border jrepo-table p-3 mb-5">
         <table className="w-100">
           <thead>
             <tr>

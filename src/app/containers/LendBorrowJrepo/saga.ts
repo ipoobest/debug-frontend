@@ -8,8 +8,8 @@
 //   takeEvery,
 // } from 'redux-saga/effects';
 // import { actions } from './slice';
-// import { Sovryn } from '../../../utils/sovryn';
-// import { selectLendBorrowSovryn } from './selectors';
+// import { Jrepo } from '../../../utils/jrepo';
+// import { selectLendBorrowJrepo } from './selectors';
 
 // function createBlockChannels({ web3 }) {
 //   return eventChannel(emit => {
@@ -46,7 +46,7 @@
 // }
 //
 // function* callCreateBlockChannels() {
-//   const web3 = Sovryn.getWeb3();
+//   const web3 = Jrepo.getWeb3();
 //   const blockChannel = yield call(createBlockChannels, { web3 });
 //
 //   try {
@@ -60,9 +60,9 @@
 // }
 //
 // function* processBlockHeader(event) {
-//   const { address } = yield select(selectLendBorrowSovryn);
+//   const { address } = yield select(selectLendBorrowJrepo);
 //   const blockNumber = event.payload.number;
-//   const web3 = Sovryn.getWeb3();
+//   const web3 = Jrepo.getWeb3();
 //
 //   try {
 //     const block = yield call(web3.eth.getBlock, blockNumber, true);
@@ -89,7 +89,7 @@
 //         const from = (txs[i].from || '').toLowerCase();
 //         const to = (txs[i].to || '').toLowerCase();
 //
-//         const hasContract = Sovryn.contractList.find(contract => {
+//         const hasContract = Jrepo.contractList.find(contract => {
 //           const address = contract.options.address.toLowerCase();
 //           return address === from || address === to;
 //         });
@@ -119,7 +119,7 @@
 //   }
 // }
 
-export function* lendBorrowSovrynSaga() {
+export function* lendBorrowJrepoSaga() {
   // yield takeLatest(actions.chainChanged.type, callCreateBlockChannels);
   // yield takeEvery(actions.blockReceived.type, processBlockHeader);
 }

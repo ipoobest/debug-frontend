@@ -1017,7 +1017,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "sovrynContractAddress",
+    "name": "jrepoContractAddress",
     "outputs": [
       {
         "internalType": "address",

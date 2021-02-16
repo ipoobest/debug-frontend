@@ -22,7 +22,7 @@ export function StatsPage() {
       <Header />
       <main>
         <div className="container mt-5">
-          <div className="sovryn-border sovryn-table p-3 mt-5 mb-5">
+          <div className="jrepo-border jrepo-table p-3 mt-5 mb-5">
             <table className="w-100 d-none d-xl-table">
               <thead>
                 <tr>

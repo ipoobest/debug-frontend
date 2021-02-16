@@ -3,7 +3,7 @@ import { getTokenContract } from 'utils/blockchain/contract-helpers';
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectWalletProvider } from '../../containers/WalletProvider/selectors';
-import { contractReader } from '../../../utils/sovryn/contract-reader';
+import { contractReader } from '../../../utils/jrepo/contract-reader';
 import { AssetsDictionary } from '../../../utils/dictionaries/assets-dictionary';
 import { CachedAssetRate } from '../../containers/WalletProvider/types';
 import { actions } from 'app/containers/WalletProvider/slice';

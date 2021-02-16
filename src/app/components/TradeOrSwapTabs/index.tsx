@@ -37,7 +37,7 @@ export function TradeOrSwapTabs(props: Props) {
   );
 
   return (
-    <div className="sovryn-tabs">
+    <div className="jrepo-tabs">
       <Tabs
         activeKey={trading.tab}
         onSelect={handleSelection}

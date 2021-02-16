@@ -3,7 +3,7 @@ import { getLendingContract } from 'utils/blockchain/contract-helpers';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from 'utils/sovryn/contract-writer';
+} from 'utils/jrepo/contract-writer';
 import { useLending_mint } from './useLending_mint';
 
 export function useLending_approveAndLend(asset: Asset, depositAmount: string) {

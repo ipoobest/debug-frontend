@@ -7,7 +7,7 @@ import { useAccount } from '../useAccount';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from '../../../utils/sovryn/contract-writer';
+} from '../../../utils/jrepo/contract-writer';
 import { TradingPairDictionary } from '../../../utils/dictionaries/trading-pair-dictionary';
 import { TradingPair } from '../../../utils/models/trading-pair';
 import { TradingPosition } from '../../../types/trading-position';

@@ -8,10 +8,10 @@ import './assets/index.scss';
 import CurrencyDetails from './components/CurrencyDetails';
 import LendingHistory from './components/LendingHistory';
 import { Header } from 'app/components/Header';
-import { lendBorrowSovrynSaga } from './saga';
+import { lendBorrowJrepoSaga } from './saga';
 import { actions, reducer, sliceKey } from './slice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLendBorrowSovryn } from './selectors';
+import { selectLendBorrowJrepo } from './selectors';
 import { TabType } from './types';
 import { Footer } from '../../components/Footer';
 import { RepayPositionHandler } from '../RepayPositionHandler/Loadable';
@@ -19,11 +19,11 @@ import { BorrowActivity } from '../../components/BorrowActivity/Loadable';
 
 type Props = {};
 
-const LendBorrowSovryn: React.FC<Props> = props => {
+const LendBorrowJrepo: React.FC<Props> = props => {
   useInjectReducer({ key: sliceKey, reducer: reducer });
-  useInjectSaga({ key: sliceKey, saga: lendBorrowSovrynSaga });
+  useInjectSaga({ key: sliceKey, saga: lendBorrowJrepoSaga });
 
-  const state = useSelector(selectLendBorrowSovryn);
+  const state = useSelector(selectLendBorrowJrepo);
   const dispatch = useDispatch();
 
   return (
@@ -52,4 +52,4 @@ const LendBorrowSovryn: React.FC<Props> = props => {
   );
 };
 
-export default LendBorrowSovryn;
+export default LendBorrowJrepo;

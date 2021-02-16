@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectWalletProvider } from '../containers/WalletProvider/selectors';
 import { ContractName } from 'utils/types/contracts';
-import { contractReader } from 'utils/sovryn/contract-reader';
+import { contractReader } from 'utils/jrepo/contract-reader';
 
 interface CacheCallResponse {
   value: string | null;

@@ -1,6 +1,6 @@
 import { EventData } from 'web3-eth-contract';
-import { SovrynNetwork } from './sovryn-network';
-import { Sovryn } from './index';
+import { JrepoNetwork } from './jrepo-network';
+import { Jrepo } from './index';
 import { ContractName } from '../types/contracts';
 import { toChunks } from '../helpers';
 import { getContract } from '../blockchain/contract-helpers';
@@ -8,9 +8,9 @@ import { getContract } from '../blockchain/contract-helpers';
 export type ReaderOption = { fromBlock: number; toBlock: number | 'latest' };
 
 class EventReader {
-  private sovryn: SovrynNetwork;
+  private jrepo: JrepoNetwork;
   constructor() {
-    this.sovryn = Sovryn;
+    this.jrepo = Jrepo;
   }
 
   public getPastEventsInChunks(
@@ -132,7 +132,7 @@ class EventReader {
     options: ReaderOption = { fromBlock: 0, toBlock: 'latest' },
   ) {
     try {
-      const _events = await this.sovryn.databaseContracts[
+      const _events = await this.jrepo.databaseContracts[
         contractName
       ].getPastEvents(eventName, {
         ...options,
@@ -142,7 +142,7 @@ class EventReader {
       let events: EventData[] = [];
       for await (let e of _events) {
         const blockNumber = (e as any).blockNumber;
-        const blockData: any = await this.sovryn
+        const blockData: any = await this.jrepo
           .getWeb3()
           .eth.getBlock(blockNumber);
         const eventDate = blockData.timestamp * 1000;
@@ -162,7 +162,7 @@ class EventReader {
   }
 
   protected async getBlockNumber() {
-    return await this.sovryn.getWeb3().eth.getBlockNumber();
+    return await this.jrepo.getWeb3().eth.getBlockNumber();
   }
 }
 

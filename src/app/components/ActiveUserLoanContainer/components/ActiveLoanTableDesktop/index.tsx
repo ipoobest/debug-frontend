@@ -70,8 +70,8 @@ export function ActiveLoanTableDesktop(props: Props) {
   }
 
   return (
-    <div className="bg-white sovryn-border p-3 d-none d-md-block">
-      <table className="sovryn-table">
+    <div className="bg-white jrepo-border p-3 d-none d-md-block">
+      <table className="jrepo-table">
         <thead>
           <tr style={{ cursor: 'pointer' }}>
             <th onClick={() => requestSort('icon')}>{getIcons('icon')}</th>

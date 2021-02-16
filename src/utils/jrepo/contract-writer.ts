@@ -1,8 +1,8 @@
 import { TransactionConfig } from 'web3-core';
 import { RevertInstructionError } from 'web3-core-helpers';
 import { actions as txActions } from 'store/global/transactions-store/slice';
-import { SovrynNetwork } from './sovryn-network';
-import { Sovryn } from './index';
+import { JrepoNetwork } from './jrepo-network';
+import { Jrepo } from './index';
 import { ContractName } from '../types/contracts';
 import { contractReader } from './contract-reader';
 import { bignumber } from 'mathjs';
@@ -21,17 +21,17 @@ export interface CheckAndApproveResult {
 }
 
 class ContractWriter {
-  private sovryn: SovrynNetwork;
+  private jrepo: JrepoNetwork;
 
   constructor() {
-    this.sovryn = Sovryn;
+    this.jrepo = Jrepo;
   }
 
   public async nonce(address?: string): Promise<number> {
-    return this.sovryn
+    return this.jrepo
       .getWriteWeb3()
       .eth.getTransactionCount(
-        address || this.sovryn.store().getState().walletProvider.address,
+        address || this.jrepo.store().getState().walletProvider.address,
       );
   }
 
@@ -55,8 +55,8 @@ class ContractWriter {
     asset: Asset,
   ): Promise<CheckAndApproveResult> {
     const amounts = Array.isArray(amount) ? amount : [amount, amount];
-    const address = this.sovryn.store().getState().walletProvider?.address;
-    const dispatch = this.sovryn.store().dispatch;
+    const address = this.jrepo.store().getState().walletProvider?.address;
+    const dispatch = this.jrepo.store().dispatch;
     dispatch(txActions.setLoading(true));
     let nonce = await this.nonce(address);
     try {
@@ -86,7 +86,7 @@ class ContractWriter {
             },
           )
           .then(tx => {
-            this.sovryn.store().dispatch(
+            this.jrepo.store().dispatch(
               txActions.addTransaction({
                 transactionHash: tx as string,
                 approveTransactionHash: null,
@@ -133,7 +133,7 @@ class ContractWriter {
       options.gasPrice = gas.get();
     }
     return new Promise<string | RevertInstructionError>((resolve, reject) => {
-      return this.sovryn.writeContracts[contractName].methods[methodName](
+      return this.jrepo.writeContracts[contractName].methods[methodName](
         ...args,
       )
         .send(options)

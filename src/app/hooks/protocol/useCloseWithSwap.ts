@@ -12,7 +12,7 @@ export function useCloseWithSwap(
 ) {
   const account = useAccount();
   const { send, ...rest } = useSendContractTx(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'closeWithSwap',
   );
 

@@ -22,21 +22,21 @@ export const networkNames = {
 
 export const rpcNodes = {
   56: 'https://bsc-dataseed.binance.org/',
-  // 30: 'https://mainnetbackup.sovryn.app/rpc',
+  // 30: 'https://mainnetbackup.jrepo.app/rpc',
   97: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
 };
 
 export const readNodes = {
   56: 'wss://ws-bsc.dome.cloud',
-  // 30: 'wss://mainnetbackup.sovryn.app/ws',
+  // 30: 'wss://mainnetbackup.jrepo.app/ws',
   97: 'wss://ws-bsc-testnet.dome.cloud/',
   // 30: 'https://public-node.rsk.co',
   // 31: 'https://public-node.testnet.rsk.co',
 };
 
 export const fastBtcApis = {
-  56: 'https://fastbtc.sovryn.app/',
-  97: 'https://testnet.sovryn.app/fastbtc',
+  56: 'https://fastbtc.jrepo.app/',
+  97: 'https://testnet.jrepo.app/fastbtc',
 };
 
 export const ethGenesisAddress = '0x0000000000000000000000000000000000000000';

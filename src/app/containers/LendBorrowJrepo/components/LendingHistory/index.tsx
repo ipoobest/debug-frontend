@@ -17,7 +17,7 @@ import { prettyTx } from '../../../../../utils/helpers';
 import '../../assets/index.scss';
 import clsx from 'clsx';
 import { ComponentSkeleton } from 'app/components/PageSkeleton';
-import { selectLendBorrowSovryn } from '../../selectors';
+import { selectLendBorrowJrepo } from '../../selectors';
 import { translations } from 'locales/i18n';
 import { DisplayDate } from '../../../../components/ActiveUserLoanContainer/components/DisplayDate';
 
@@ -28,7 +28,7 @@ const LendingHistory: React.FC<Props> = props => {
   const isConnected = useIsConnected();
   const [open, setOpen] = useState(false);
 
-  const { asset } = useSelector(selectLendBorrowSovryn);
+  const { asset } = useSelector(selectLendBorrowJrepo);
 
   const contract = getLendingContractName(asset);
   const { events: mint, loading: loadingMint } = useGetContractPastEvents(

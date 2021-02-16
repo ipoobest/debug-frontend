@@ -10,7 +10,7 @@ import * as blockies from 'blockies-ts';
 import { useInjectSaga } from 'utils/redux-injectors';
 import { connectWalletButtonSaga } from './saga';
 import { Button } from '@blueprintjs/core';
-import { Sovryn } from '../../../utils/sovryn';
+import { Jrepo } from '../../../utils/jrepo';
 import { prettyTx } from '../../../utils/helpers';
 import { useAccount, useIsConnected } from '../../hooks/useAccount';
 import { translations } from 'locales/i18n';
@@ -24,13 +24,13 @@ export function ConnectWalletButton() {
   const [imgSrc, setImgSrc] = useState<string>(null as any);
 
   const handleWalletConnection = useCallback(() => {
-    Sovryn.connect()
+    Jrepo.connect()
       .then(() => {})
       .catch(console.error);
   }, []);
 
   const handleDisconnect = () => {
-    Sovryn.disconnect();
+    Jrepo.disconnect();
   };
 
   useEffect(() => {

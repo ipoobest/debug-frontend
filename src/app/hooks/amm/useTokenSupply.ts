@@ -1,7 +1,7 @@
 import { Asset } from 'types/asset';
 import { getPoolTokenContractName } from 'utils/blockchain/contract-helpers';
 import { useCacheCallWithValue } from '../useCacheCallWithValue';
-import { Sovryn } from '../../../utils/sovryn';
+import { Jrepo } from '../../../utils/jrepo';
 import { ContractName } from '../../../utils/types/contracts';
 
 /**
@@ -12,7 +12,7 @@ import { ContractName } from '../../../utils/types/contracts';
 export function useTokenSupply(pool: Asset, asset: Asset) {
   const contractName = getPoolTokenContractName(pool, asset);
   return useCacheCallWithValue(
-    Sovryn.contracts.hasOwnProperty(contractName)
+    Jrepo.contracts.hasOwnProperty(contractName)
       ? contractName
       : ('' as ContractName),
     'totalSupply',

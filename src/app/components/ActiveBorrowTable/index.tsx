@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 import { AssetsDictionary } from 'utils/dictionaries/assets-dictionary';
-import { actions } from 'app/containers/LendBorrowSovryn/slice';
+import { actions } from 'app/containers/LendBorrowJrepo/slice';
 
 import { InterestAPR } from '../ActiveUserLoanContainer/components/InterestAPR';
 import { DisplayDate } from '../ActiveUserLoanContainer/components/DisplayDate';
@@ -99,8 +99,8 @@ export function ActiveBorrowTable(props: Props) {
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
   return (
-    <div className="bg-white sovryn-border p-3">
-      <table {...getTableProps()} className="sovryn-table">
+    <div className="bg-white jrepo-border p-3">
+      <table {...getTableProps()} className="jrepo-table">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

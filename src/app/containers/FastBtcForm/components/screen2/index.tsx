@@ -112,7 +112,7 @@ export function Screen2({ state, dispatch }: Props) {
         </div>
       </div>
       <div className="d-flex flex-row justify-content-end">
-        <div className="sovryn-border small p-2 d-flex flex-row justify-content-between align-items-center">
+        <div className="jrepo-border small p-2 d-flex flex-row justify-content-between align-items-center">
           {t(s.txDetected)}
           <div
             className={`ml-3 circle circle-${

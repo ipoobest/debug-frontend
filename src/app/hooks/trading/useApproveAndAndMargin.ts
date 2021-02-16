@@ -5,7 +5,7 @@ import { useDepositCollateral } from './useDepositCollateral';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from '../../../utils/sovryn/contract-writer';
+} from '../../../utils/jrepo/contract-writer';
 
 export function useApproveAndAddMargin(
   collateralToken: Asset,
@@ -23,7 +23,7 @@ export function useApproveAndAddMargin(
     if (collateralToken !== Asset.BNB) {
       tx = await contractWriter.checkAndApprove(
         collateralToken,
-        appContracts.sovrynProtocol.address,
+        appContracts.jrepoProtocol.address,
         depositAmount,
       );
       if (tx.rejected) {

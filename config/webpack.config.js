@@ -662,8 +662,8 @@ module.exports = function (webpackEnv) {
         new SentryWebpackPlugin({
           // sentry-cli configuration
           authToken: process.env.SENTRY_AUTH_TOKEN,
-          org: 'sovryn',
-          project: 'sovryn-app',
+          org: 'jrepo',
+          project: 'jrepo-app',
 
           // webpack specific configuration
           include: '.',

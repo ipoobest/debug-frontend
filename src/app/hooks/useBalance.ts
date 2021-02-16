@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Sovryn } from '../../utils/sovryn';
+import { Jrepo } from '../../utils/jrepo';
 import { useSelector } from 'react-redux';
 import { selectWalletProvider } from '../containers/WalletProvider/selectors';
 
@@ -14,7 +14,7 @@ export function useBalance() {
   useEffect(() => {
     if (address) {
       setState(prevState => ({ ...prevState, loading: true, error: null }));
-      Sovryn.getWeb3()
+      Jrepo.getWeb3()
         .eth.getBalance(address)
         .then(balance => {
           setState(prevState => ({

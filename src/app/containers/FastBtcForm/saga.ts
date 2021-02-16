@@ -8,7 +8,7 @@ import { actions } from './slice';
 import { selectFastBtcForm } from './selectors';
 import { actions as wActions } from 'app/containers/WalletProvider/slice';
 import { selectWalletProvider } from '../WalletProvider/selectors';
-import { Sovryn } from '../../../utils/sovryn';
+import { Jrepo } from '../../../utils/jrepo';
 
 export function* verifyReceiverWallet({ payload }: PayloadAction<string>) {
   let valid;
@@ -105,7 +105,7 @@ function* accountChanged() {
   if (address) {
     const result = yield call(
       // @ts-ignore
-      [Sovryn, Sovryn.getWeb3().eth.getBalance],
+      [Jrepo, Jrepo.getWeb3().eth.getBalance],
       address,
     );
     if (result === '0') {

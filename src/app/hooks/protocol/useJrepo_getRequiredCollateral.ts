@@ -9,7 +9,7 @@ import { useCacheCallWithValue } from '../useCacheCallWithValue';
  * @param newPrincipal
  * @param isTorqueLoan
  */
-export function useSovryn_getRequiredCollateral(
+export function useJrepo_getRequiredCollateral(
   borrowToken: Asset,
   collateralToken: Asset,
   withdrawAmount: string,
@@ -17,7 +17,7 @@ export function useSovryn_getRequiredCollateral(
   isTorqueLoan: boolean,
 ) {
   return useCacheCallWithValue(
-    'sovrynProtocol',
+    'jrepoProtocol',
     'getRequiredCollateral',
     '0',
     getTokenContract(borrowToken).address,

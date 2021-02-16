@@ -2,7 +2,7 @@ import { Asset } from 'types/asset';
 import {
   CheckAndApproveResult,
   contractWriter,
-} from 'utils/sovryn/contract-writer';
+} from 'utils/jrepo/contract-writer';
 import { getAmmContract } from 'utils/blockchain/contract-helpers';
 import { useAddLiquidity } from './useAddLiquidity';
 

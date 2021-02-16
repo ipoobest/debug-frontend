@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import LendingContainer from '../../LendingContainer';
 import BorrowingContainer from '../../BorrowingContainer';
 import '../../assets/index.scss';
-import { selectLendBorrowSovryn } from '../../selectors';
+import { selectLendBorrowJrepo } from '../../selectors';
 import { actions } from '../../slice';
 import { TabType } from '../../types';
 import { translations } from 'locales/i18n';
@@ -14,12 +14,12 @@ import { translations } from 'locales/i18n';
 type Props = {};
 
 const CurrencyDetails: React.FC<Props> = () => {
-  const { tab, asset } = useSelector(selectLendBorrowSovryn);
+  const { tab, asset } = useSelector(selectLendBorrowJrepo);
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
   return (
-    <div className="sovryn-tabs">
+    <div className="jrepo-tabs">
       <Tabs
         activeKey={tab}
         onSelect={k => dispatch(actions.changeTab((k as unknown) as TabType))}
