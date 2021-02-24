@@ -284,7 +284,7 @@ export class JrepoNetwork {
 
   protected async initDatabaseWeb3(chainId: number) {
     try {
-      const nodeUrl = 'https://bsc-dataseed.binance.org'; // HOTFIX
+      const nodeUrl = 'https://bsc-rpc.dome.cloud/'; // HOTFIX
       const web3Provider = new Web3.providers.HttpProvider(nodeUrl, {
         keepAlive: true,
       });
