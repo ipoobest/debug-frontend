@@ -11,6 +11,7 @@ import { InterestAPR } from '../ActiveUserLoanContainer/components/InterestAPR';
 import { DisplayDate } from '../ActiveUserLoanContainer/components/DisplayDate';
 import { BorrowAmount } from './BorrowAmount';
 import { CollateralAmount } from './CollateralAmount';
+import { CollateralRatio } from './CollateralRatio';
 
 interface Props {
   data: any;
@@ -29,6 +30,12 @@ export function ActiveBorrowTable(props: Props) {
       {
         Header: 'Collateral',
         accessor: 'collateralAmount',
+        sortType: 'alphanumeric',
+        sortable: true,
+      },
+      {
+        Header: 'Collateral Ratio',
+        accessor: 'collateralRatio',
         sortType: 'alphanumeric',
         sortable: true,
       },
@@ -70,6 +77,7 @@ export function ActiveBorrowTable(props: Props) {
             }
           />
         ),
+        collateralRatio: <CollateralRatio amount={item.currentMargin} />,
         interestAPR: (
           <InterestAPR
             interestPerDay={item.interestOwedPerDay}
