@@ -9,7 +9,7 @@ import alphaIcon from 'assets/images/tokens/alpha.svg';
 import dogeIcon from 'assets/images/tokens/doge.svg';
 import bandIcon from 'assets/images/tokens/band.svg';
 import usdtIcon from 'assets/images/tokens/usdt.svg';
-import btcIcon from 'assets/images/tokens/btc.svg';
+// import btcIcon from 'assets/images/tokens/btc.svg';
 
 import { AssetDetails } from '../models/asset-details';
 
@@ -22,6 +22,7 @@ export class AssetsDictionary {
       [Asset.GASH, new AssetDetails(Asset.GASH, 'GASH', 'GASH', 18, goldIcon)],
       [Asset.ETH, new AssetDetails(Asset.ETH, 'ETH', 'ETH', 18, ethIcon)],
       // eslint-disable-next-line
+      [Asset.USDT, new AssetDetails(Asset.USDT, 'USDT', 'USDT', 18, usdtIcon)],
       [
         Asset.ALPHA,
         new AssetDetails(Asset.ALPHA, 'ALPHA', 'ALPHA', 18, alphaIcon),
@@ -29,8 +30,7 @@ export class AssetsDictionary {
       //[Asset.WBNB, new AssetDetails(Asset.WBNB, 'WBNB', 'WBNB', 18, bnbIcon)],
       [Asset.DOGE, new AssetDetails(Asset.DOGE, 'DOGE', 'DOGE', 18, dogeIcon)],
       [Asset.BAND, new AssetDetails(Asset.BAND, 'BAND', 'BAND', 18, bandIcon)],
-      [Asset.USDT, new AssetDetails(Asset.USDT, 'USDT', 'USDT', 18, usdtIcon)],
-      // [Asset.WBTC, new AssetDetails(Asset.WBTC, 'WBTC', 'WBTC', 18, btcIcon)],ใ
+      // [Asset.WBTC, new AssetDetails(Asset.WBTC, 'WBTC', 'WBTC', 18, btcIcon)],
     ],
   );
 
