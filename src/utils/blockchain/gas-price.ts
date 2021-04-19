@@ -1,7 +1,7 @@
 import { toWei } from 'web3-utils';
 
 class GasPrice {
-  private gasPrice: string = toWei('15', 'gwei');
+  private gasPrice: string = toWei('5', 'gwei');
   public set(amountInGwei: string): void {
     this.gasPrice = amountInGwei;
   }
