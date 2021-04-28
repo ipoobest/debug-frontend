@@ -64,6 +64,7 @@ export function BorrowHistory(props: Props) {
       const timestamp = String(
         new Date((item as any).eventDate).getTime() / 1e3,
       );
+      console.log('item debts', item);
       return {
         id: item.returnValues.loanId,
         borrowAmount: (
@@ -91,6 +92,9 @@ export function BorrowHistory(props: Props) {
       };
     });
   }, [events]);
+
+  // const data = React.useMemo(() => {}, [event]);
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -98,6 +102,7 @@ export function BorrowHistory(props: Props) {
     rows,
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
+  console.log('data', data);
   return (
     <div className="bg-white jrepo-border p-3">
       <table {...getTableProps()} className="jrepo-table">
@@ -138,13 +143,12 @@ export function BorrowHistory(props: Props) {
         <tbody {...getTableBodyProps()} style={{ cursor: 'pointer' }}>
           {rows.map(row => {
             prepareRow(row);
+            // console.log('row', row);
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map(cell => {
                   return (
-                    <td className="align-middle" {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                    </td>
+                    <td className="align-middle">{cell.render('Cell')}</td>
                   );
                 })}
               </tr>

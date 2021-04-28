@@ -58,6 +58,7 @@ export function ActiveBorrowTable(props: Props) {
   );
   const data = React.useMemo(() => {
     return props.data.map(item => {
+      // console.log('len history', item);
       return {
         id: item.loanId,
         borrowAmount: (

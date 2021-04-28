@@ -31,13 +31,18 @@ const CurrencyRow: React.FC<Props> = ({
   return (
     <div
       className={clsx(
-        'jrepo-border px-3 py-1 py-lg-2 currency-container font-family-work-sans mb-2 text-muted',
+        'jrepo-border px-3 py-1 py-lg-1 currency-container font-family-work-sans mb-2 text-muted',
         active && 'currency-container__active',
       )}
     >
       <div className="d-flex flex-row justify-content-start align-items-center currency currency-title w-lg-25 mb-3 mb-lg-0">
         <StyledImage src={lendingPool.getAssetDetails().logoSvg} />
-        <h3 className="m-0 font-family-rowdies">{lendingPool.getName()}</h3>
+        <h3
+          className="m-0 font-family-poppins"
+          style={{ fontSize: '22px', fontWeight: 500 }}
+        >
+          {lendingPool.getName()}
+        </h3>
 
         <div className="d-flex flex-row justify-content-end align-items-center currency ml-auto">
           <div className="mr-5 w-50">

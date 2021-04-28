@@ -1,9 +1,15 @@
 :root {
   --Teal: #4ecdc4;
   // --background: #006eff;
-  --background: #0665C7;
-  --background2: rgb(1,0,24);
-  --background-gradient: linear-gradient(180deg, rgba(1,0,24,1) 0%, rgba(4,40,62,1) 39%, rgba(9,95,121,1) 69%, rgba(0,180,196,1) 100%);
+  --background: #0665c7;
+  --background2: rgb(1, 0, 24);
+  --background-gradient: linear-gradient(
+    180deg,
+    rgba(1, 0, 24, 1) 0%,
+    rgba(4, 40, 62, 1) 39%,
+    rgba(9, 95, 121, 1) 69%,
+    rgba(0, 180, 196, 1) 100%
+  );
   // --secondary-bg: #414042;
   --secondary-bg: #ffffff;
   // --component-bg: #0b223b;
@@ -19,7 +25,6 @@
   --TabGrey: #213b58;
 
   --primary-text-color: #000;
-  
 
   --black: #000;
   --dark-gray: #656565;
@@ -43,7 +48,7 @@
 
   --primary-font: 'Rowdies', cursive;
   --secondary-font: 'Work Sans', sans-serif;
-
+  --third-font: 'Poppins', sans-serif;
 }
 
 // $body-bg: #242424;
@@ -60,23 +65,21 @@ $white: $body-color;
 //$indigo:  #6610f2 !default;
 //$purple:  #6f42c1 !default;
 //$pink:    #e83e8c !default;
-$red:     #eb2106;
+$red: #eb2106;
 //$orange:  #fd7e14 !default;
 //$yellow:  #ffc107 !default;
-$green:   #00ce7d;
-$teal:    #4ecdc4;
+$green: #00ce7d;
+$teal: #4ecdc4;
 //$cyan:    #17a2b8 !default;
 
-
-$primary:       $body-bg;
-$secondary:     #2d2d2d;
-$success:       $green;
+$primary: $body-bg;
+$secondary: #2d2d2d;
+$success: $green;
 //$info:          $cyan !default;
 //$warning:       $yellow !default;
-$danger:        $red;
-$light:         $body-color;
-$dark:          $body-bg;
-
+$danger: $red;
+$light: $body-color;
+$dark: $body-bg;
 
 /* FOR BOOTSTRAP THEMES */
 
@@ -92,19 +95,18 @@ $theme-colors: (
   'red': #eb2106,
   'green': #00ce7d,
   'customOrange': #ff9931,
-  'Gold':  #fec006,
-  'customTeal':  #4ecdc4,
-  'lightGrey':  #a9bacd,
-  'MediumGrey':  #7b96b5,
+  'Gold': #fec006,
+  'customTeal': #4ecdc4,
+  'lightGrey': #a9bacd,
+  'MediumGrey': #7b96b5,
   'Grey_text': #586c86,
   'primaryBackground': #192b41,
-  'secondaryBackground':  #414042,
-  'fieldBackground':  #05182e,
+  'secondaryBackground': #414042,
+  'fieldBackground': #05182e,
   'component-bg': #0b223b,
   'TabGrey': #213b58,
-  'Red': #eb2106
+  'Red': #eb2106,
 );
-
 
 $border-radius: 5px;
 $font-family-base: 'Rowdies', cursive;
@@ -114,5 +116,3 @@ $font-family-base: 'Rowdies', cursive;
 //$font-size-lg: 24px;
 
 /* FOR BLUEPRINT CUSTOMIZATION */
-
-

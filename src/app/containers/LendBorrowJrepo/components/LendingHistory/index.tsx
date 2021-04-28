@@ -43,7 +43,7 @@ const LendingHistory: React.FC<Props> = props => {
   const [events, setEvents] = useState<EventData[]>([]);
   const [copied, setCopied] = useState<string>('');
 
-  console.log(events);
+  // console.log('event len histoey', events);
 
   useEffect(() => {
     const merged = [...mint, ...burn].sort(

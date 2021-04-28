@@ -99,7 +99,9 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
       }
     } else if (type === 'Redeem') {
       // amount = depositedBalance;
-      amount = (BigInt(depositedBalance) + BigInt(profit)).toString();
+      amount = (BigInt(depositedBalance) + BigInt(profit))
+        .toString()
+        .concat('0');
       // alert(`${depositedBalance} + ${BigInt(profit)} = ${amount}`);
     }
     setAmount(weiTo18(amount));

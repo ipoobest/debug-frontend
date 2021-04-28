@@ -47,7 +47,7 @@ export function useGetContractPastEvents(
     setLoading(true);
     getEvents()
       .then(result => {
-        // console.log("getEvent Result:", result);
+        console.log('getEvent Result:', result);
         setEvents(result);
         setLoading(false);
       })

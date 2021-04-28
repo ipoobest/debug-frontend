@@ -19,7 +19,7 @@ const CurrencyDetails: React.FC<Props> = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="jrepo-tabs">
+    <div className="jrepo-tabs font-family-poppins">
       <Tabs
         activeKey={tab}
         onSelect={k => dispatch(actions.changeTab((k as unknown) as TabType))}

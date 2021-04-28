@@ -26,6 +26,8 @@ export function ActiveUserBorrows(props: Props) {
     false,
   );
 
+  // console.log('len history', value);
+
   if (loading && !value.length) {
     return <SkeletonRow />;
   }

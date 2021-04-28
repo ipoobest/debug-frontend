@@ -13,8 +13,15 @@
     <meta name="description" content="Crypto Lending with Jrepo" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Rowdies:wght@300;700&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&family=Rowdies:wght@300;700&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;500;700&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script
       type="text/javascript"
       src="https://s3.tradingview.com/tv.js"
@@ -50,8 +57,14 @@
         -ms-flex-align: center;
         align-items: center;
         /* background: #0665C7 !important; */
-        background: rgb(1,0,24) !important;
-        background: linear-gradient(180deg, rgba(1,0,24,1) 0%, rgba(4,40,62,1) 39%, rgba(9,95,121,1) 69%, rgba(0,180,196,1) 100%) !important;
+        background: rgb(1, 0, 24) !important;
+        background: linear-gradient(
+          180deg,
+          rgba(1, 0, 24, 1) 0%,
+          rgba(4, 40, 62, 1) 39%,
+          rgba(9, 95, 121, 1) 69%,
+          rgba(0, 180, 196, 1) 100%
+        ) !important;
       }
       .sv-logo {
         width: 190px;
@@ -62,15 +75,64 @@
         font-family: Courier, monospace;
       }
     </style>
-
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="sv-container">
         <div class="sv-logo">
-          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2703.1 554.63"><defs><style>.cls-1{fill:#fff;}</style></defs><title>J-Repo</title><rect class="cls-1" x="1080.44" y="3.58" width="415.2" height="98.22"/><path class="cls-1" d="M393.85,4.6,393,377.52c0,115.66-79.61,174.88-196,174.88S0,472.7,0,357V342.19H84.4v17.19c0,70.34,47.37,111.8,114.58,111.8s88.75-40.59,88.75-110.92L284.84,4.75Z"/><path class="cls-1" d="M730,393.38H604.56v155.8H481.49V3.89h236.8c142.56,0,223.57,68.55,223.57,189.3,0,84.12-35.83,144.89-102,176L955.88,549.18H816.45ZM718.29,290.56c67.78,0,106.72-31.16,106.72-93.48,0-60.76-38.94-91.14-106.72-91.14H604.56V290.56Z"/><path class="cls-1" d="M1855.59,3.89c138.65,0,218.11,68.55,218.11,189.3,0,127-79.46,200.19-218.11,200.19H1747.31v155.8H1624.23V3.89ZM1747.31,290.56h102c68.55,0,107.5-31.16,107.5-93.48,0-60.76-38.95-91.14-107.5-91.14h-102Z"/><path class="cls-1" d="M2703.1,276.54c0,157.35-126.19,278.09-292.89,278.09s-292.9-120-292.9-278.09C2117.31,117.63,2243.51,0,2410.21,0S2703.1,118.4,2703.1,276.54Zm-459.59,0c0,95.81,77.12,170.59,168.26,170.59s165.14-74.78,165.14-170.59-74-169-165.14-169C2319.85,107.5,2243.51,180.72,2243.51,276.54Z"/><rect class="cls-1" x="1148.41" y="217.88" width="272.33" height="102.68"/><rect class="cls-1" x="1080.44" y="445.57" width="424.13" height="98.22"/></svg>
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 2703.1 554.63"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <title>J-Repo</title>
+            <rect
+              class="cls-1"
+              x="1080.44"
+              y="3.58"
+              width="415.2"
+              height="98.22"
+            />
+            <path
+              class="cls-1"
+              d="M393.85,4.6,393,377.52c0,115.66-79.61,174.88-196,174.88S0,472.7,0,357V342.19H84.4v17.19c0,70.34,47.37,111.8,114.58,111.8s88.75-40.59,88.75-110.92L284.84,4.75Z"
+            />
+            <path
+              class="cls-1"
+              d="M730,393.38H604.56v155.8H481.49V3.89h236.8c142.56,0,223.57,68.55,223.57,189.3,0,84.12-35.83,144.89-102,176L955.88,549.18H816.45ZM718.29,290.56c67.78,0,106.72-31.16,106.72-93.48,0-60.76-38.94-91.14-106.72-91.14H604.56V290.56Z"
+            />
+            <path
+              class="cls-1"
+              d="M1855.59,3.89c138.65,0,218.11,68.55,218.11,189.3,0,127-79.46,200.19-218.11,200.19H1747.31v155.8H1624.23V3.89ZM1747.31,290.56h102c68.55,0,107.5-31.16,107.5-93.48,0-60.76-38.95-91.14-107.5-91.14h-102Z"
+            />
+            <path
+              class="cls-1"
+              d="M2703.1,276.54c0,157.35-126.19,278.09-292.89,278.09s-292.9-120-292.9-278.09C2117.31,117.63,2243.51,0,2410.21,0S2703.1,118.4,2703.1,276.54Zm-459.59,0c0,95.81,77.12,170.59,168.26,170.59s165.14-74.78,165.14-170.59-74-169-165.14-169C2319.85,107.5,2243.51,180.72,2243.51,276.54Z"
+            />
+            <rect
+              class="cls-1"
+              x="1148.41"
+              y="217.88"
+              width="272.33"
+              height="102.68"
+            />
+            <rect
+              class="cls-1"
+              x="1080.44"
+              y="445.57"
+              width="424.13"
+              height="98.22"
+            />
+          </svg>
         </div>
         <div class="sv-loading-text">is loading...</div>
       </div>
@@ -82,7 +144,5 @@
         console.warn(e);
       }
     </script>
-
-
   </body>
 </html>

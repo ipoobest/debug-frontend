@@ -42,7 +42,7 @@ const LendBorrowJrepo: React.FC<Props> = props => {
           </div>
         </Row>
       </main>
-      <Container className="mt-4">
+      <Container className="mt-4 font-family-poppins">
         {state.tab === TabType.LEND && <LendingHistory />}
         {state.tab === TabType.BORROW && <BorrowActivity />}
         <RepayPositionHandler />
