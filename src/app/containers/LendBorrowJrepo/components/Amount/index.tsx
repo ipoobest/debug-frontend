@@ -28,6 +28,7 @@ const Amount: React.FC<Props> = ({
   onMaxChange,
   loadingLimit,
 }) => {
+  // console.log('amount value', amountValue)
   return (
     <div className="d-flex flex-row justify-content-between mb-3">
       <div className="d-flex flex-grow-1 flex-column">

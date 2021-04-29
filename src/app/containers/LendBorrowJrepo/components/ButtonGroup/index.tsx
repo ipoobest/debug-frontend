@@ -11,6 +11,8 @@ import { useLending_supplyInterestRate } from '../../../../hooks/lending/useLend
 import { bignumber } from 'mathjs';
 import { useAccount } from '../../../../hooks/useAccount';
 import { useLending_assetBalanceOf } from '../../../../hooks/lending/useLending_assetBalanceOf';
+import { useLending_balanceOf } from 'app/hooks/lending/useLending_balanceOf';
+
 import { Tooltip } from '@blueprintjs/core';
 
 type Props = {
@@ -32,13 +34,18 @@ const ButtonGroup: React.FC<Props> = ({
   const { t } = useTranslation();
   const asset = currency as Asset;
   const { value: profitCall } = useLending_profitOf(asset, useAccount());
-  const { value: balanceCall } = useLending_assetBalanceOf(asset, useAccount());
+  // const { value: balanceCall } = useLending_assetBalanceOf(asset, useAccount());
   const { value: interestCall } = useLending_supplyInterestRate(asset);
-
-  const [balance, setBalance] = useState(
-    bignumber(balanceCall).minus(profitCall).toString(),
+  const { value: depositedBalance } = useLending_balanceOf(
+    currency,
+    useAccount(),
   );
 
+  const [balance, setBalance] = useState(
+    // bignumber(balanceCall).minus(profitCall).toString(),
+    bignumber(depositedBalance).toString(),
+  );
+  // console.log('balanceCall', balanceCall);
   const [profit, setProfit] = useState(profitCall);
   const [ticker, setTicker] = useState('0');
 
@@ -47,8 +54,10 @@ const ButtonGroup: React.FC<Props> = ({
   }, [currency]);
 
   useEffect(() => {
-    setBalance(bignumber(balanceCall).minus(profitCall).toString());
-  }, [balanceCall, profitCall, setBorrowAmount]);
+    // TODO FIX THIS BIGNUMBERS
+    // setBalance(bignumber(depositedBalance).minus(profitCall).toString());
+    setBalance(bignumber(depositedBalance).toString());
+  }, [depositedBalance, profitCall, setBorrowAmount]);
 
   useEffect(() => {
     setTicker(
@@ -78,7 +87,6 @@ const ButtonGroup: React.FC<Props> = ({
   useEffect(() => {
     setCurrentButton(key);
   }, [key, setCurrentButton]);
-
   return (
     <>
       <div className="row">
@@ -128,6 +136,7 @@ const ButtonGroup: React.FC<Props> = ({
                     position="top"
                     content={<>{weiToFixed(balance, 18)}</>}
                   >
+                    {/* fix balance this */}
                     {weiToFixed(balance, 4)}
                   </Tooltip>
                 </strong>

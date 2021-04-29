@@ -46,6 +46,7 @@ const TabContainer: React.FC<Props> = ({
   loadingLimit,
 }) => {
   const [currentButton, setCurrentButton] = useState(leftButton);
+  // console.log('amount value : ', amountValue);
   return (
     <>
       <ButtonGroup

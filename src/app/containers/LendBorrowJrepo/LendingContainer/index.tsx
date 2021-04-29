@@ -74,6 +74,7 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
   useEffect(() => {
     const ms = 1000;
     // const diff = bignumber(ticker).div(1000).div(ms);
+    console.log('profit ass ', profit);
     let value = bignumber(profitCall).add(profit);
     const interval = setInterval(() => {
       // value = value.add(diff);
@@ -99,9 +100,11 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
       }
     } else if (type === 'Redeem') {
       // amount = depositedBalance;
-      amount = (BigInt(depositedBalance) + BigInt(profit))
-        .toString()
-        .concat('0');
+      // console.log(
+      //   'BigInt(depositedBalance) + BigInt(profit)',
+      //   BigInt(depositedBalance) + BigInt(profit),
+      // );
+      amount = (BigInt(depositedBalance) + BigInt(profit)).toString();
       // alert(`${depositedBalance} + ${BigInt(profit)} = ${amount}`);
     }
     setAmount(weiTo18(amount));
