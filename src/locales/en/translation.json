@@ -124,7 +124,8 @@
   "mainMenu": {
     "lend": "Lend/Borrow",
     "wallet": "Wallet",
-    "stats": "Stats"
+    "stats": "Stats",
+    "IToken": "Itoken"
   },
   "trandingPositionSelector": {
     "long": "Long",
@@ -446,5 +447,6 @@
       "title": "My Wallet",
       "description": "Information about connected wallet"
     }
-  }
+  },
+  "iTokens": "iTokens (interest-earning tokens) are minted when you deposit corresponding AssetsDictionary. iTokens increase in value and are worth more than the underlying asset ."
 }

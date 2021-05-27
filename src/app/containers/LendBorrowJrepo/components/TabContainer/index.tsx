@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Asset } from 'types/asset';
-
+import { Tooltip, Icon } from '@blueprintjs/core';
+import { CustomDialog } from '../../../../components/CustomDialog';
 import Amount from '../Amount';
 import ButtonGroup from '../ButtonGroup';
 import AccountBalance from '../AccountBalance';
 
 import '../../assets/index.scss';
 import { SendTxResponse } from '../../../../hooks/useSendContractTx';
+import { AssetsDictionary } from 'utils/dictionaries/assets-dictionary';
+import { assetByTokenAddress } from 'utils/blockchain/contract-helpers';
+import { translations } from 'locales/i18n';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   currency: Asset;
@@ -46,7 +51,9 @@ const TabContainer: React.FC<Props> = ({
   loadingLimit,
 }) => {
   const [currentButton, setCurrentButton] = useState(leftButton);
+  const [showForm, setShowForm] = useState(false);
   // console.log('amount value : ', amountValue);
+  const { t } = useTranslation();
   return (
     <>
       <ButtonGroup
@@ -67,6 +74,15 @@ const TabContainer: React.FC<Props> = ({
         maxValue={currentButton === 'Deposit' ? maxValue : '0'}
         loadingLimit={loadingLimit}
       />
+      <div style={{ float: 'right', marginTop: '-25px', marginBottom: '10px' }}>
+        <Icon icon="info-sign" color="gray" onClick={() => setShowForm(true)} />
+      </div>
+      <CustomDialog
+        show={showForm}
+        title="iToken"
+        content={t(translations.iTokens)}
+        onClose={() => setShowForm(false)}
+      />
       <AccountBalance
         title={currentButton}
         txState={txState}
@@ -82,3 +98,5 @@ const TabContainer: React.FC<Props> = ({
 };
 
 export default TabContainer;
+
+// iTokens (interest-earning tokens) are minted when you deposit corresponding AssetsDictionary. iTokens increase in value and are worth more than the underlying assetByTokenAddress.

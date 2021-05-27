@@ -27,7 +27,7 @@ export const rpcNodes = {
 };
 
 export const readNodes = {
-  56: 'wss://ws-bsc.dome.cloud',
+  56: 'wss://bsc-ws-node.nariox.org:443',
   // 30: 'wss://mainnetbackup.jrepo.app/ws',
   97: 'wss://ws-bsc-testnet.dome.cloud/',
   // 30: 'https://public-node.rsk.co',

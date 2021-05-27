@@ -160,6 +160,13 @@
   }
 }
 
+.jrepo-container {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  width: 100%;
+  background: var(--white);
+}
+
 input {
   font-family: var(--secondary-font);
   font-weight: 400;
@@ -301,4 +308,8 @@ header {
 
 .text-black {
   color: var(--black);
+}
+
+.text-body-style {
+  font-size: 20px;
 }

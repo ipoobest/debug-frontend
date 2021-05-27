@@ -432,5 +432,8 @@
       "title": "Minha carteira",
       "description": "Informações sobre a carteira conectada"
     }
+  },
+  "iTokens": {
+    "content": "iTokens (interest-earning tokens) are minted when you deposit corresponding AssetsDictionary. iTokens increase in value and are worth more than the underlying asset ."
   }
 }

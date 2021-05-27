@@ -25,6 +25,7 @@ import { useEffect, useState } from 'react';
 
 import { TutorialDialog } from './components/TutorialDialog/container';
 import { WalletPage } from './containers/WalletPage/Loadable';
+import { ITokenPage } from './containers/ITokenPage/Loadable';
 
 const title =
   currentNetwork !== 'mainnet' ? `JREPO ${currentNetwork}` : 'JREPO';
@@ -78,6 +79,7 @@ export function App() {
           <Route exact path="/lend" component={LendBorrowJrepo} />
           <Route exact path="/stats" component={StatsPage} />
           <Route exact path="/wallet" component={WalletPage} />
+          <Route exact path="/Itoken" component={ITokenPage} />
           <Route
             exact
             path="/optin-success"

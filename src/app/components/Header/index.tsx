@@ -79,6 +79,9 @@ export function Header() {
               <NavLink className="nav-item mr-4" to="/wallet">
                 {t(translations.mainMenu.wallet)}
               </NavLink>
+              <NavLink className="nav-item mr-4" to="/Itoken">
+                {t(translations.mainMenu.IToken)}
+              </NavLink>
             </div>
             <WalletConnector />
           </div>
