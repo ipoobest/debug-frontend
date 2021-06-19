@@ -293,8 +293,8 @@ export class JrepoNetwork {
         this.addDatabaseContract(key, appContracts[key]);
       });
 
-      console.log('initDatabaseWeb3', this._databaseWeb3);
-      console.log('database of contracts', this.databaseContracts);
+      // console.log('initDatabaseWeb3', this._databaseWeb3);
+      // console.log('database of contracts', this.databaseContracts);
     } catch (e) {
       console.error('init database web3 fails.');
       console.error(e);

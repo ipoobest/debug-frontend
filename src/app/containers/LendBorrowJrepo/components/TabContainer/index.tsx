@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Asset } from 'types/asset';
-import { Tooltip, Icon } from '@blueprintjs/core';
 import { CustomDialog } from '../../../../components/CustomDialog';
+import { IToken } from '../../../../components/IToken';
 import Amount from '../Amount';
 import ButtonGroup from '../ButtonGroup';
 import AccountBalance from '../AccountBalance';
 
 import '../../assets/index.scss';
 import { SendTxResponse } from '../../../../hooks/useSendContractTx';
-import { AssetsDictionary } from 'utils/dictionaries/assets-dictionary';
-import { assetByTokenAddress } from 'utils/blockchain/contract-helpers';
+// import { AssetsDictionary } from 'utils/dictionaries/assets-dictionary';
+// import { assetByTokenAddress } from 'utils/blockchain/contract-helpers';
 import { translations } from 'locales/i18n';
 import { useTranslation } from 'react-i18next';
 
@@ -75,7 +75,11 @@ const TabContainer: React.FC<Props> = ({
         loadingLimit={loadingLimit}
       />
       <div style={{ float: 'right', marginTop: '-25px', marginBottom: '10px' }}>
-        <Icon icon="info-sign" color="gray" onClick={() => setShowForm(true)} />
+        <IToken
+          tokenName="iBUSD"
+          tokenValue="0"
+          onClose={() => setShowForm(true)}
+        />
       </div>
       <CustomDialog
         show={showForm}

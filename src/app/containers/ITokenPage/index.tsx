@@ -10,8 +10,6 @@ import { useTranslation } from 'react-i18next';
 import { translations } from '../../../locales/i18n';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { UserAssets } from '../../components/UserAssets';
-//import { TopUpHistory } from '../../components/TopUpHistory';
 
 export function ITokenPage() {
   const { t } = useTranslation();

@@ -23,6 +23,8 @@ export function StatsRowData(props: Props) {
     '0',
   );
 
+  console.log('value', parseFloat(weiTo18(value)));
+
   function MaybePrepend() {
     if (props.prepend) {
       return (
