@@ -61,6 +61,7 @@ export function BorrowHistory(props: Props) {
   );
   const data = React.useMemo(() => {
     return events.map(item => {
+      console.log('item event borrowAmount', item);
       const timestamp = String(
         new Date((item as any).eventDate).getTime() / 1e3,
       );
@@ -102,7 +103,7 @@ export function BorrowHistory(props: Props) {
     rows,
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
-  console.log('data', data);
+  console.log('data Borrow', data);
   return (
     <div className="bg-white jrepo-border p-3">
       <table {...getTableProps()} className="jrepo-table">

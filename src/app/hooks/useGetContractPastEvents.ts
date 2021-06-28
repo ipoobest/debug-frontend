@@ -27,6 +27,17 @@ export function useGetContractPastEvents(
   const getEvents = useCallback(async () => {
     const fromBlock = getContract(contractName).blockNumber;
     const toBlock = 'latest';
+
+    console.log('fromBlock', fromBlock);
+    console.log('toBlock', toBlock);
+    console.log('contractName', contractName);
+    console.log('event', event);
+    console.log('filters', filters);
+    console.log('filtersEventKeyMap', {
+      [filtersEventKeyMap[event]]: address,
+      ...filters,
+    });
+
     return eventReader.getPastEvents(
       contractName,
       event,
@@ -47,7 +58,7 @@ export function useGetContractPastEvents(
     setLoading(true);
     getEvents()
       .then(result => {
-        console.log('getEvent Result:', result);
+        // console.log('getEvent Result:', result);
         setEvents(result);
         setLoading(false);
       })

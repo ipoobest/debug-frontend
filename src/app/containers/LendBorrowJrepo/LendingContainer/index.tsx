@@ -90,7 +90,7 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
     value: maxAmount,
     loading: loadingLimit,
   } = useLending_transactionLimit(currency, currency);
-
+  // TODO check this
   const onMaxChange = (type: string) => {
     let amount = '0';
     if (type === 'Deposit') {
@@ -99,13 +99,8 @@ const LendingContainer: React.FC<Props> = ({ currency }) => {
         amount = min(userBalance, maxAmount);
       }
     } else if (type === 'Redeem') {
-      // amount = depositedBalance;
-      // console.log(
-      //   'BigInt(depositedBalance) + BigInt(profit)',
-      //   BigInt(depositedBalance) + BigInt(profit),
-      // );
       amount = (BigInt(depositedBalance) + BigInt(profit)).toString();
-      // alert(`${depositedBalance} + ${BigInt(profit)} = ${amount}`);
+      alert(`${depositedBalance} + ${BigInt(profit)} = ${amount}`);
     }
     setAmount(weiTo18(amount));
   };

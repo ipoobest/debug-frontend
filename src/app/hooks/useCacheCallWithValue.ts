@@ -8,12 +8,17 @@ export function useCacheCallWithValue(
   defaultValue: string | any = '0',
   ...args: any
 ) {
+  // console.log('contract name', contractName);
+  // console.log('methodName', methodName);
+  // console.log('defaultValue', defaultValue);
+  // console.log('args', ...args);
   const { value, loading, error } = useCacheCall(
     contractName,
     methodName,
     ...args,
   );
 
+  // console.log('...value, loading, error', { value, loading, error });
   const [fixedValue, setFixedValue] = useState(
     value !== null ? value : defaultValue,
   );

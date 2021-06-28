@@ -19,7 +19,7 @@ export function StatsList(props: Props) {
   const { t } = useTranslation();
   const logo = AssetsDictionary.get(props.asset).logoSvg;
   const lendingContract = getLendingContractName(props.asset);
-  console.log('props StatsList', props);
+  // console.log('props StatsList', props);
 
   return (
     <>

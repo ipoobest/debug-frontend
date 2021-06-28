@@ -26,6 +26,7 @@ import { useEffect, useState } from 'react';
 import { TutorialDialog } from './components/TutorialDialog/container';
 import { WalletPage } from './containers/WalletPage/Loadable';
 import { ITokenPage } from './containers/ITokenPage/Loadable';
+import { ProviderDebug } from '../debugs/provider';
 
 const title =
   currentNetwork !== 'mainnet' ? `JREPO ${currentNetwork}` : 'JREPO';
@@ -80,6 +81,8 @@ export function App() {
           <Route exact path="/stats" component={StatsPage} />
           <Route exact path="/wallet" component={WalletPage} />
           <Route exact path="/Itoken" component={ITokenPage} />
+          <Route exact path="/debug-provider" component={ProviderDebug} />
+
           <Route
             exact
             path="/optin-success"

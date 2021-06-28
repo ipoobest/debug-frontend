@@ -1,4 +1,5 @@
 import { EventData } from 'web3-eth-contract';
+import axios from 'axios';
 import { JrepoNetwork } from './jrepo-network';
 import { Jrepo } from './index';
 import { ContractName } from '../types/contracts';
@@ -124,6 +125,8 @@ class EventReader {
       blockChunkSize,
     ).promise;
   }
+
+  public async getLogs(contractName: ContractName, eventName: string) {}
 
   public async getPastEvents(
     contractName: ContractName,

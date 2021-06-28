@@ -235,7 +235,7 @@ export class JrepoNetwork {
   }
 
   protected async initReadWeb3(chainId: number) {
-    console.log('initReadWeb3', chainId);
+    // console.log('initReadWeb3', chainId);
 
     try {
       if (
@@ -253,10 +253,13 @@ export class JrepoNetwork {
           web3Provider = new Web3.providers.WebsocketProvider(nodeUrl, {
             reconnectDelay: 10,
           });
+          // console.log('check web s node', web3Provider);
           isWebsocket = true;
         }
+        // http://localhost:5000/
 
         this._readWeb3 = new Web3(web3Provider);
+        // console.log('_readWeb3', this._readWeb3);
 
         Array.from(Object.keys(appContracts)).forEach(key => {
           this.addReadContract(key, appContracts[key]);
@@ -265,7 +268,6 @@ export class JrepoNetwork {
         if (isWebsocket) {
           const provider: WebsocketProvider = this._readWeb3
             .currentProvider as WebsocketProvider;
-
           provider.on('end', () => {
             provider.removeAllListeners('end');
             this.contracts = {};
@@ -284,7 +286,7 @@ export class JrepoNetwork {
 
   protected async initDatabaseWeb3(chainId: number) {
     try {
-      const nodeUrl = 'https://bsc-dataseed2.defibit.io/'; // HOTFIX
+      const nodeUrl = 'https://bsc-dataseed2.binance.org/'; // HOTFIX
       const web3Provider = new Web3.providers.HttpProvider(nodeUrl, {
         keepAlive: true,
       });
@@ -293,8 +295,8 @@ export class JrepoNetwork {
         this.addDatabaseContract(key, appContracts[key]);
       });
 
-      // console.log('initDatabaseWeb3', this._databaseWeb3);
-      // console.log('database of contracts', this.databaseContracts);
+      console.log('initDatabaseWeb3', this._databaseWeb3);
+      console.log('database of contracts', this.databaseContracts);
     } catch (e) {
       console.error('init database web3 fails.');
       console.error(e);
@@ -346,7 +348,7 @@ export class JrepoNetwork {
       const accounts = await this._writeWeb3.eth.getAccounts();
 
       const address = accounts[0];
-      console.log('Account Address', address);
+      // console.log('Account Address', address);
       const networkId = await this._writeWeb3.eth.net.getId();
       const chainId = await (this._writeWeb3.eth as any).chainId();
 

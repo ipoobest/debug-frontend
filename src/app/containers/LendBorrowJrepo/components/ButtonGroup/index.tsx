@@ -38,6 +38,7 @@ const ButtonGroup: React.FC<Props> = ({
   const [balance, setBalance] = useState(
     bignumber(balanceCall).minus(profitCall).toString(),
   );
+  // console.log('profit call', profitCall);
 
   const [profit, setProfit] = useState(profitCall);
   const [ticker, setTicker] = useState('0');

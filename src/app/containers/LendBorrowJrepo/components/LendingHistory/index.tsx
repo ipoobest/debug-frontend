@@ -31,6 +31,7 @@ const LendingHistory: React.FC<Props> = props => {
   const { asset } = useSelector(selectLendBorrowJrepo);
 
   const contract = getLendingContractName(asset);
+  // console.log('contract lending', contract);
   const { events: mint, loading: loadingMint } = useGetContractPastEvents(
     contract,
     'Mint',
