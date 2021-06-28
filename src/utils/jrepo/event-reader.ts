@@ -134,21 +134,27 @@ class EventReader {
     filter: any = undefined,
     options: ReaderOption = { fromBlock: 0, toBlock: 'latest' },
   ) {
+    console.log('contractName', contractName);
+    console.log('eventName', eventName); //topic0
+    console.log('filter', filter);
+    console.log('option block', options);
+    const _events: any = this.getHistory();
+    console.log('_events 1 :', _events);
+
     try {
-      const _events = await this.jrepo.databaseContracts[
-        contractName
-      ].getPastEvents(eventName, {
-        ...options,
-        ...{ filter },
-      });
+      console.log('_events', _events);
 
       let events: EventData[] = [];
       for await (let e of _events) {
         const blockNumber = (e as any).blockNumber;
+        console.log('block number', blockNumber);
         const blockData: any = await this.jrepo
           .getWeb3()
           .eth.getBlock(blockNumber);
+        console.log('blockData', blockData);
         const eventDate = blockData.timestamp * 1000;
+
+        console.log('eventDate', eventDate);
 
         const evt: any = {
           ...(e as {}),
@@ -160,8 +166,23 @@ class EventReader {
       }
       return events;
     } catch (e) {
+      console.log('e:', e);
       return [];
     }
+  }
+
+  public async getHistory() {
+    axios
+      .get(
+        'https://api.bscscan.com/api?module=logs&action=getLogs&address=0xf263906c77C64f8426dEa674891c80d894880dDA&topic0=0x6349c1a02ec126f7f4fc6e6837e1859006e90e9901635c442d29271e77b96fb6&topic0_1_opr=and&topic1=0x000000000000000000000000d124e1E63F855E4cbcC4812C1a9a13EdC0922143&apikey=S2Y1B6ZXWXQJMIG3ZXDJM54T95TG753M3Z',
+      )
+      .then(res => {
+        console.log('getHistory', res.data);
+        return res.data;
+      })
+      .catch(e => {
+        console.log(e);
+      });
   }
 
   protected async getBlockNumber() {
