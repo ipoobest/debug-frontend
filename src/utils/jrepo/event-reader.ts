@@ -142,8 +142,14 @@ class EventReader {
     console.log('_events 1 :', _events);
 
     try {
-      console.log('_events', _events);
-
+      // console.log('_events', _events);
+      const _events = await this.jrepo.databaseContracts[
+        contractName
+      ].getPastEvents(eventName, {
+        ...options,
+        ...{ filter },
+      });
+      //TODO (1) call bacscan api
       let events: EventData[] = [];
       for await (let e of _events) {
         const blockNumber = (e as any).blockNumber;
